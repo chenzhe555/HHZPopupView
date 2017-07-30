@@ -1,0 +1,1357 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00B96E3629ED2D534B131E69D481A866 /* HHZApplicationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B03F17C0C7844D8E5CFB0C89A16B9327 /* HHZApplicationTool.m */; };
+		05CCACA485C68327E289E6D086452A58 /* HHZFileHashTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D96E823D00B36DDC8D9D17FCECFECAA /* HHZFileHashTool.m */; };
+		05CEFB18667C6E26D45E670517977AB9 /* UITableView+HHZCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AC1F34F9366E95F1A482F210061A4BF /* UITableView+HHZCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05E0F88E47EA7DE2F82063C025F3D37C /* HHZDateToolFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E64E31DC7EAC1049628F16CF856F8338 /* HHZDateToolFactory.m */; };
+		06CD5839311037A2690D2320B62C6E1E /* HHZThreadSafeArray.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4526E3912EE8768D3D00A6D45C4AF5 /* HHZThreadSafeArray.m */; };
+		0726E3315856880CADCCFFE4BB1D710A /* NSNull+HHZCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = A9EDFA8AFF1C7296B0AEB81A05086FD0 /* NSNull+HHZCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		079DF74E495830A3BFB2AA5693735540 /* HHZMapTool.h in Headers */ = {isa = PBXBuildFile; fileRef = E9FBF4DB15FCAD9F1321697DDE96A81E /* HHZMapTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C695A7588B113EF9CC4D691437425AC /* HHZPathTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE2B26DB4D214B80620846DED5D5787 /* HHZPathTool.m */; };
+		14C70B2545B2D450EF94992BF88CD6C4 /* UIColor+HHZCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C0241D10E7F7CDE094AF985B6F8E4CD /* UIColor+HHZCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		17FA85F9AF1CF75124B62B18F6258EB6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		198735A135FCC7F2A1B23C05B80F5244 /* HHZEncrptionFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A10AE25181AB4238E145AA95E1BC826 /* HHZEncrptionFactory.m */; };
+		1BDDDB0F53D2BF5AAC09AB4E650E8AA0 /* HHZApplicationTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 5783BCE804F68F9E42B6F94483C8C869 /* HHZApplicationTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		237A150BF3E20CCD046BF77906C5CF4E /* NSDictionary+HHZCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6BB03B0E8239DFB114CC0A76D0C2BD /* NSDictionary+HHZCategory.m */; };
+		29AD62EA3AC03E5799E008F04FEC317C /* NSNumber+HHZCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 987DD9CFE2BE05FE812FEA721868CEE9 /* NSNumber+HHZCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2E6AA84AF82386311D7D4EEF072D3BB2 /* HHZNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B392FDE9A2CE59914722A70C97B1547 /* HHZNavigationController.m */; };
+		2FE14FB17BE0F8CCA4BB4DBD4ACCA1D1 /* HHZCookieGenerateUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 14194FC7D7B5BBD05668506B8ED1FECC /* HHZCookieGenerateUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30DE9E8FD8669DC9940E4314A3D3E559 /* HHZThreadSafeArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 84708EEA9C7E7F65A8F5D9DAA318514E /* HHZThreadSafeArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		311E41A6BF2FB711C295CE458A9979D5 /* NSNotificationCenter+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BBDC8EFEB2F2755C3D6B3500611F9D /* NSNotificationCenter+Category.m */; };
+		326DD60CE97CE50E1160FE0CF76DFDDC /* HHZUtils-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B987E6DC75A9E211AF9EACC63E407BF5 /* HHZUtils-dummy.m */; };
+		352BF54200E14F4AD93A7D5B80101ED7 /* HHZTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 03B7468B74E09B2668BB1E7E68465F2B /* HHZTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CA8EC53E42332793B2F39256B58C803 /* HHZNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DBDE214D70ACEB77DFA647ABDBB5D0D /* HHZNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D486877D84FCE4602B21D1F356573AE /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = CA132D42872EC671691D2395675720EB /* GTMBase64.m */; };
+		3D886F9E46C55CDA1E5D0B8A16028DCA /* UIButton+HHZCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 434ED8A0CBE3758530091ED586D7A537 /* UIButton+HHZCategory.m */; };
+		3E9AEAFF53741C05D34269DF3928E01D /* HHZTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 42477F3EBF90DDE2DB8CDBBA09824A5F /* HHZTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3EAB2EB637F4F1C48AE81647041D6A24 /* HHZLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9032D00A39CEE62F15DF3FC9F26CAE94 /* HHZLabel.m */; };
+		3EF9A492EDDB97E6D739108186BB23C6 /* HHZViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 13885433CD08A7C1920B70C6E88EC809 /* HHZViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46639088A87F912D456A062420243850 /* HHZThreadSafeDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 828B6A13A0593D983050FEBEFD536B90 /* HHZThreadSafeDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A635BDDB88DD663885CA219F2C3FBF2 /* HHZCookieGenerateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F598B421456420964FEE0813EF97DC /* HHZCookieGenerateUtil.m */; };
+		4D79D2218B34A4D85610296F546432EB /* NSNumber+HHZCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C0990CE9B85D00942E85DB432A3AD0B /* NSNumber+HHZCategory.m */; };
+		51E09763F52EA8C1D375F76A399AB5BE /* HHZDateTool.h in Headers */ = {isa = PBXBuildFile; fileRef = E38CA446AFCF8BB12E6CD330AC472A28 /* HHZDateTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5698CFA9217346B7F3B3A73B2B2962C6 /* UITableView+HHZCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B868E1598ED4F3BA851A18FB78F7DB1E /* UITableView+HHZCategory.m */; };
+		5BF6FD8502BE4B3AA376C5B65E1C8084 /* HHZMethodException.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD113229F178E8FF4A4415EE97C2C75 /* HHZMethodException.m */; };
+		5BFF7D746D16B722D058D878CCB2B723 /* HHZPlistTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F7C13F67BC75C99BE3B8C18A627B06D /* HHZPlistTool.m */; };
+		5C2E5C8766CF586AAE696FC4AA9A3B66 /* NSString+HHZCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 9364D67B74D5A4BBED2185E1308D5FB9 /* NSString+HHZCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5DBDBDED80585381BC0FEF4F87164F7E /* HHZJSONTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 15771371F72BEC8EB38B7D8B09A16C26 /* HHZJSONTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		623E5C325F5149B4DF7E6B0D03E6A5FC /* HHZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C34E7F42A3230C3152EE97115A00FF7 /* HHZViewController.m */; };
+		6595A1083F922A5008513AB85CEF5B77 /* NSObject+HHZCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F23556AA99038D05F61913607299D18 /* NSObject+HHZCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		69F488FB98B59D8537E09FC1A2D6BC1D /* HHZDateToolFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = B9907A0EA154E26B100C461DA8BE6C63 /* HHZDateToolFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6AF730A72D95C3732799E7AC2ADBC6DC /* HHZTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8758D04CAD04894C97F9929C729427D /* HHZTableView.m */; };
+		6B9964B084322D4609C9C72587E0A640 /* NSTimer+HHZCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3F4DB5F8474881CBACBF55DF3C1C51 /* NSTimer+HHZCategory.m */; };
+		701F88403E7F453CFB8BE55B69582222 /* HHZMD5Encryption.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FADF94F851C95F36086324556BF1BBF /* HHZMD5Encryption.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7315E0FB37F7CCDD67E913CBB8C6EA0C /* NSException+HHZCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 47DD13BB96C49950566719A94E430A15 /* NSException+HHZCategory.m */; };
+		733C2B7CA7D4FE269C087E63B29E1662 /* HHZFileHashTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 0381434A5F933886084EB3E08CB3D032 /* HHZFileHashTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75AFE44FE4DF95949D9D55E2877484CC /* HHZNumericalTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 41DC8673F75C717EB363B360DBD0EAED /* HHZNumericalTool.m */; };
+		7DEC2B43EC8B92E2F2917692115C3504 /* UIView+HHZCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EE65B92902E6F07DE362D3668846DE /* UIView+HHZCategory.m */; };
+		810FD2586311EB507CFA356DD53C8902 /* HHZNumericalTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 96B37D544B04FE91303E0C037126F424 /* HHZNumericalTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		882A802A0962E3DB5EAA78D18B3DA794 /* HHZRegularTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA063893A10BB7012A748C9C244D971 /* HHZRegularTool.m */; };
+		8BE18D82F23F13A6F49839AB6420810B /* NSNull+HHZCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB22A21C56B6B24540726697C10AC55 /* NSNull+HHZCategory.m */; };
+		8FC98AC24E8C87283352A6E8458F8C09 /* UIButton+HHZCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = CFF281B42E675E5A136C6772E5A2AB6E /* UIButton+HHZCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		91BBCFB937B50B4FE2BE30FAC71C3280 /* HHZMethodException.h in Headers */ = {isa = PBXBuildFile; fileRef = 188B89F89B7F59101C5ADBCDB1039591 /* HHZMethodException.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94AAF961C456FAB9605B3142C70EC6FE /* HHZMapTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A22DA3EB613694D02ED29B27E0D21EB /* HHZMapTool.m */; };
+		98747F2368325CC08E2A170CDABFD01B /* UIScreen+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C16DDAFD27F67006A8C382BA891515 /* UIScreen+Category.m */; };
+		9C1322C5C0993ED4FFC636976657201A /* Pods-HHZPopupView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4A7139DFC70EC5D77B3C8CD2FDB1A2 /* Pods-HHZPopupView-dummy.m */; };
+		A42F06F3189E70BC809E43AFA8950DFB /* HHZBase64Encrption.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BE75856089492665F1768610C3654EC /* HHZBase64Encrption.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A8075CC4D066136B3B16B636F152FE5D /* HHZEncrptionFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 679AFF60EB0D6F535D816EF69E4C78F2 /* HHZEncrptionFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A91EB4647027DA29B49FAF9E2A226396 /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = B0C24159B65159ECA3F7E304692EB12B /* GTMDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AABE8124837F51C2BD707B0981DC55C2 /* UIImage+HHZCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D158DF88EB20D6C0698CC144ADD5E1 /* UIImage+HHZCategory.m */; };
+		ABDAE8D372E090892B67FCCBBF3C2242 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		ACFA41AED4672C6C6EC7062573327A5D /* HHZDateTool_Format.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BD697E7EF42EE28FB4125D3BE0463D1 /* HHZDateTool_Format.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF679C0A7BCD138EC7CE47AA90532B60 /* HHZCalculateTool.h in Headers */ = {isa = PBXBuildFile; fileRef = BF144A7D467BDD3485BE26DB83596846 /* HHZCalculateTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B05A727397228430ACA1BF9419BC86BA /* NSArray+HHZCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 615F77B644D570F99B74A9B74A24EDF5 /* NSArray+HHZCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B0C23E83D9C000C14F674E0FE6DB4326 /* UIImage+HHZCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = D54833E2F986BACE4E55954CD0F7AB49 /* UIImage+HHZCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B13AABD876461FC3896727E0958E11AC /* HHZReachabilityTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC513BB94FCFFB5684B1B73BFBDC94C /* HHZReachabilityTool.m */; };
+		B1B546A10F69D9E59AF295D29D2242F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		B282C33A34BA744A6F3D50972100FC41 /* NSException+HHZCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 778D9FAA6A85111631E011AD8D767B86 /* NSException+HHZCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B67453224BC018112B7089C5ED4708C5 /* UIScreen+Category.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A36BB5EAA6C75D1A323C4CFD1E144C3 /* UIScreen+Category.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B6CA65D03043D2E2BB0D3127776EA9F1 /* HHZWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 59335F60ABCFB4BA6F280F6B2BD5E7C1 /* HHZWeakProxy.m */; };
+		B7262E14D47D3A616C894800D4C62AD7 /* HHZMD5Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 553B7D44B3A4376F95AB020257488B7D /* HHZMD5Encryption.m */; };
+		B86923E65F7F9998AEDA3AA6E6444262 /* HHZDESEncryption.h in Headers */ = {isa = PBXBuildFile; fileRef = 14647C4F3093B43169022248D770318A /* HHZDESEncryption.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B8F5CA45200E8A631D778C8A036E70A6 /* HHZWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = CC6CC364EB750972C3601FF3C44F3DE5 /* HHZWebViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BAFB58EA1EF836D724CAB3349E0637C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		BDA1D3E6B31BA9E7477574E98667A93C /* HHZArchiveTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D98580ABE60F41E395B0FF71FABF431 /* HHZArchiveTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BE4BE35EE8B61EBD69343671DB2F19CF /* HHZPlistTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F3F8D280094ADE3A4A8DA398E44A1A8 /* HHZPlistTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF15A38702716484FEEBFA9C534D6859 /* UIImageView+HHZCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE567E463088B558B983E63FA8C7EFD /* UIImageView+HHZCategory.m */; };
+		BF3EF4DB1720B0313BC549E50E23D02A /* HHZCategory-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 384B4F2C0859A23E9C94204CAC7FDB5D /* HHZCategory-dummy.m */; };
+		C0465F417F8A74EF9841326D9D8EF0B3 /* HHZThreadSafeDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 295CBCD16BF35A69F14EF7761001F19F /* HHZThreadSafeDictionary.m */; };
+		C0FC5B94B1919A44C4F3583A743B299E /* HHZDateTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B83656CE91F6299D1ED407641A5128 /* HHZDateTool.m */; };
+		C1CF3F27A71E81B5F58B36100D76654A /* HHZDateTool_Format.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F067106832EF75086B4B34701FE52C /* HHZDateTool_Format.m */; };
+		C62F6B6FE0AA91AAC7F8ACEE07D98C35 /* HHZJSONTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0200F3ECDBEEAFCF6F86720D33E3500E /* HHZJSONTool.m */; };
+		C8077E1BC7992F1A5867C573F7664370 /* NSTimer+HHZCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 442D605A15F90B53AEE1807C8EB01461 /* NSTimer+HHZCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C822928659FAD2E6A02ED50A06E239E7 /* UILabel+HHZCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D64A80C173502C5D0DBCF7AA993541E /* UILabel+HHZCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CAFE7F18B9ED042C2618CD36087EAB89 /* HHZDESEncryption.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5EC95759191FFC5877298E0C0AA429 /* HHZDESEncryption.m */; };
+		CAFFC4E206663413D55BFB4D508BA64C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
+		CE2C243EAB6A84BE2087B972378886D2 /* HHZLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C437D3C4C1EA78CB96E582938BFFCCB /* HHZLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CFEF9D6CF17AD1540573CFEB3B308E2F /* HHZAESEncryption.h in Headers */ = {isa = PBXBuildFile; fileRef = F16774B0CD257B88F5804B3156FA9CDD /* HHZAESEncryption.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CFF73DBF5139FB29C988A4DCA649C021 /* HHZTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 941BE9AAFAC15A7793AFEC4F825F3957 /* HHZTableViewCell.m */; };
+		D025856F83529A2471CA650019107329 /* NSNotificationCenter+Category.h in Headers */ = {isa = PBXBuildFile; fileRef = BE7F48399DE00C3A66DBEED91123A48F /* NSNotificationCenter+Category.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D1B5BEF8C603EB8ED20B152EC0C8C5D7 /* GTMBase64.h in Headers */ = {isa = PBXBuildFile; fileRef = 778F26D039288A5ED6E61C6356DF7412 /* GTMBase64.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D1FF47384DD5D2E8C0806DE9DA46C178 /* HHZBaseClass-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 58CCA1B737D09DD70A09BCC0557E87C4 /* HHZBaseClass-dummy.m */; };
+		D268AF1CC00196BA11E2EE136901D926 /* HHZReachabilityTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 218BB7E8EA8E25D46204C396573A8DA2 /* HHZReachabilityTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D332B17D66FDD617C2C71BD43150865D /* UILabel+HHZCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EBEFF01AF289584BA24D16E64ADE936 /* UILabel+HHZCategory.m */; };
+		D490EF093716E4B45723C8192964B5B6 /* HHZCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = D0E62B682FD930597B11576C308C4733 /* HHZCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D67B4DD3A907C6494286F189CA27C442 /* NSString+HHZCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = DE641E1EDAF71AC01404F2676E67C421 /* NSString+HHZCategory.m */; };
+		D86F696E1D05BEC86CA7E0CC888EC6D3 /* HHZKitTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 60E8F7EC5DE48A2FE4C32C616D29C897 /* HHZKitTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD7E42B2928FE8324E214546B3F48484 /* HHZRegularTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 43293C32ADC04283F2AF8A8EB7689B40 /* HHZRegularTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E033624129D02444663E8B6801B04700 /* HHZWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C14547CD7A10AB96E92C716CD274F4 /* HHZWebViewController.m */; };
+		E048A051095698A7E1A49ABDAA13395B /* UIColor+HHZCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = FE20B6D9D6815D6951F3F7B59B1B4C11 /* UIColor+HHZCategory.m */; };
+		E2CB3E060D788B8122C8FA1F14CCBB5B /* HHZCalculateTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC22EED2D7A792CA3765B6FCE74981 /* HHZCalculateTool.m */; };
+		E4FBB65D97A56AD881D8D10CC2D6E79F /* HHZArchiveTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8328E732BD916C62FD64AA3B6DB9BA50 /* HHZArchiveTool.m */; };
+		E8C728882173ED14C833DD92D184BE9E /* NSArray+HHZCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F2E9E48D271BC40FB8B744B7AEFE15 /* NSArray+HHZCategory.m */; };
+		EC5395CF365B1E0CB8BA2854F75F3B0A /* HHZWeakProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E2A95DD4265A6F79683355474555AE3 /* HHZWeakProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECBC7550D54E6860EE79B250DAF6F310 /* NSObject+HHZCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B68836BB9290C61C40749683BF04B581 /* NSObject+HHZCategory.m */; };
+		EE0990D10740D7AEB3E1336BD514C511 /* HHZPathTool.h in Headers */ = {isa = PBXBuildFile; fileRef = CEE50633E81F8E26F1E2D22E31C3C186 /* HHZPathTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EED228AD798EC87A6D57EAA29877F3AD /* NSDictionary+HHZCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 9650475BCBA2BC4489AD8794E2CDA055 /* NSDictionary+HHZCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF49414D823E1B1D868DE7A866B642F5 /* UIView+HHZCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = FA8DD4C6D9C4DEC38F9F476DAF3C5138 /* UIView+HHZCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFAD95A91FF671AD39ADD8CCAB8EA340 /* HHZAESEncryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 7068BA20F37FE83CF2C4A31A1912BCD0 /* HHZAESEncryption.m */; };
+		EFBA8A676F8EC593DE4902CA68AE86F8 /* HHZBase64Encrption.m in Sources */ = {isa = PBXBuildFile; fileRef = D220EC01C20910013C4162E0FF0698F6 /* HHZBase64Encrption.m */; };
+		F14ED2747E489D1BE90F732115E6F82D /* HHZDeviceTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 2410A69678DB1707156A1E34FB0451C9 /* HHZDeviceTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F7D96E3732C38D56BB61C3EB16A29ED1 /* UIImageView+HHZCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E04A49C6376377DA43C133F133AA702 /* UIImageView+HHZCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F7F76F765BD7709BC5D3247ACA5CD2B8 /* HHZDeviceTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 91384D5B38C56411B17524248D0D2A47 /* HHZDeviceTool.m */; };
+		FC72F83C88176998CAEB4AA28AC076E0 /* HHZKitTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 420C291B8491D5AD03BA7D1847B605C8 /* HHZKitTool.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8FBE54F10F2934F44C84C957AD011AB2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B14067D386E5B02DD4E0B4123CB28A5B;
+			remoteInfo = HHZCategory;
+		};
+		9814E5EDD0FA777962E60531C1CBE85E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C55A5CADA8AFB476398B7B2350CD32D7;
+			remoteInfo = HHZBaseClass;
+		};
+		B00E79B4FFEEC9A59BD1D1A2375F43BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F680E6685F30569E9729FB0E9154EC98;
+			remoteInfo = HHZUtils;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0200F3ECDBEEAFCF6F86720D33E3500E /* HHZJSONTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHZJSONTool.m; path = HHZUtils/json/HHZJSONTool.m; sourceTree = "<group>"; };
+		0381434A5F933886084EB3E08CB3D032 /* HHZFileHashTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHZFileHashTool.h; path = HHZUtils/file/HHZFileHashTool.h; sourceTree = "<group>"; };
+		03B7468B74E09B2668BB1E7E68465F2B /* HHZTableViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHZTableViewCell.h; path = HHZBaseClass/tableview/HHZTableViewCell.h; sourceTree = "<group>"; };
+		0B392FDE9A2CE59914722A70C97B1547 /* HHZNavigationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHZNavigationController.m; path = HHZBaseClass/navi/HHZNavigationController.m; sourceTree = "<group>"; };
+		13885433CD08A7C1920B70C6E88EC809 /* HHZViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHZViewController.h; path = HHZBaseClass/vc/HHZViewController.h; sourceTree = "<group>"; };
+		14194FC7D7B5BBD05668506B8ED1FECC /* HHZCookieGenerateUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHZCookieGenerateUtil.h; path = HHZUtils/cookie/HHZCookieGenerateUtil.h; sourceTree = "<group>"; };
+		14647C4F3093B43169022248D770318A /* HHZDESEncryption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHZDESEncryption.h; path = HHZUtils/encryption/HHZDESEncryption.h; sourceTree = "<group>"; };
+		15771371F72BEC8EB38B7D8B09A16C26 /* HHZJSONTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHZJSONTool.h; path = HHZUtils/json/HHZJSONTool.h; sourceTree = "<group>"; };
+		188B89F89B7F59101C5ADBCDB1039591 /* HHZMethodException.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHZMethodException.h; path = HHZUtils/exception/HHZMethodException.h; sourceTree = "<group>"; };
+		1C0241D10E7F7CDE094AF985B6F8E4CD /* UIColor+HHZCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+HHZCategory.h"; path = "HHZCategory/uikit/UIColor+HHZCategory.h"; sourceTree = "<group>"; };
+		1DBDE214D70ACEB77DFA647ABDBB5D0D /* HHZNavigationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHZNavigationController.h; path = HHZBaseClass/navi/HHZNavigationController.h; sourceTree = "<group>"; };
+		1DE2B26DB4D214B80620846DED5D5787 /* HHZPathTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHZPathTool.m; path = HHZUtils/kit/HHZPathTool.m; sourceTree = "<group>"; };
+		1DFC22EED2D7A792CA3765B6FCE74981 /* HHZCalculateTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHZCalculateTool.m; path = HHZUtils/calculate/HHZCalculateTool.m; sourceTree = "<group>"; };
+		1E04A49C6376377DA43C133F133AA702 /* UIImageView+HHZCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+HHZCategory.h"; path = "HHZCategory/uikit/UIImageView+HHZCategory.h"; sourceTree = "<group>"; };
+		1E2A95DD4265A6F79683355474555AE3 /* HHZWeakProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHZWeakProxy.h; path = HHZBaseClass/others/HHZWeakProxy.h; sourceTree = "<group>"; };
+		1F3F8D280094ADE3A4A8DA398E44A1A8 /* HHZPlistTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHZPlistTool.h; path = HHZUtils/plist/HHZPlistTool.h; sourceTree = "<group>"; };
+		218BB7E8EA8E25D46204C396573A8DA2 /* HHZReachabilityTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHZReachabilityTool.h; path = HHZUtils/http/HHZReachabilityTool.h; sourceTree = "<group>"; };
+		2410A69678DB1707156A1E34FB0451C9 /* HHZDeviceTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHZDeviceTool.h; path = HHZUtils/device/HHZDeviceTool.h; sourceTree = "<group>"; };
+		27C16DDAFD27F67006A8C382BA891515 /* UIScreen+Category.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScreen+Category.m"; path = "HHZCategory/uikit/UIScreen+Category.m"; sourceTree = "<group>"; };
+		295CBCD16BF35A69F14EF7761001F19F /* HHZThreadSafeDictionary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHZThreadSafeDictionary.m; path = HHZUtils/system/HHZThreadSafeDictionary.m; sourceTree = "<group>"; };
+		29BBDC8EFEB2F2755C3D6B3500611F9D /* NSNotificationCenter+Category.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNotificationCenter+Category.m"; path = "HHZCategory/foundation/NSNotificationCenter+Category.m"; sourceTree = "<group>"; };
+		2C34E7F42A3230C3152EE97115A00FF7 /* HHZViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHZViewController.m; path = HHZBaseClass/vc/HHZViewController.m; sourceTree = "<group>"; };
+		323AE70B2EDB5EEA91E7EDF422BC9C82 /* HHZCategory-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HHZCategory-prefix.pch"; sourceTree = "<group>"; };
+		384B4F2C0859A23E9C94204CAC7FDB5D /* HHZCategory-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HHZCategory-dummy.m"; sourceTree = "<group>"; };
+		38D158DF88EB20D6C0698CC144ADD5E1 /* UIImage+HHZCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+HHZCategory.m"; path = "HHZCategory/uikit/UIImage+HHZCategory.m"; sourceTree = "<group>"; };
+		3A22DA3EB613694D02ED29B27E0D21EB /* HHZMapTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHZMapTool.m; path = HHZUtils/kit/HHZMapTool.m; sourceTree = "<group>"; };
+		3F23556AA99038D05F61913607299D18 /* NSObject+HHZCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+HHZCategory.h"; path = "HHZCategory/foundation/NSObject+HHZCategory.h"; sourceTree = "<group>"; };
+		41DC8673F75C717EB363B360DBD0EAED /* HHZNumericalTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHZNumericalTool.m; path = HHZUtils/numerical/HHZNumericalTool.m; sourceTree = "<group>"; };
+		420C291B8491D5AD03BA7D1847B605C8 /* HHZKitTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHZKitTool.m; path = HHZUtils/kit/HHZKitTool.m; sourceTree = "<group>"; };
+		42477F3EBF90DDE2DB8CDBBA09824A5F /* HHZTableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHZTableView.h; path = HHZBaseClass/tableview/HHZTableView.h; sourceTree = "<group>"; };
+		43293C32ADC04283F2AF8A8EB7689B40 /* HHZRegularTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHZRegularTool.h; path = HHZUtils/regular/HHZRegularTool.h; sourceTree = "<group>"; };
+		434ED8A0CBE3758530091ED586D7A537 /* UIButton+HHZCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+HHZCategory.m"; path = "HHZCategory/uikit/UIButton+HHZCategory.m"; sourceTree = "<group>"; };
+		442D605A15F90B53AEE1807C8EB01461 /* NSTimer+HHZCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSTimer+HHZCategory.h"; path = "HHZCategory/foundation/NSTimer+HHZCategory.h"; sourceTree = "<group>"; };
+		45E8AE14BBF6A89597FA6BC83BDE3879 /* HHZBaseClass.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HHZBaseClass.xcconfig; sourceTree = "<group>"; };
+		47DD13BB96C49950566719A94E430A15 /* NSException+HHZCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSException+HHZCategory.m"; path = "HHZCategory/foundation/NSException+HHZCategory.m"; sourceTree = "<group>"; };
+		4886948CA613C794B293115F1DE9C9EC /* HHZCategory.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HHZCategory.xcconfig; sourceTree = "<group>"; };
+		4C437D3C4C1EA78CB96E582938BFFCCB /* HHZLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHZLabel.h; path = HHZBaseClass/kit/HHZLabel.h; sourceTree = "<group>"; };
+		4D96E823D00B36DDC8D9D17FCECFECAA /* HHZFileHashTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHZFileHashTool.m; path = HHZUtils/file/HHZFileHashTool.m; sourceTree = "<group>"; };
+		553B7D44B3A4376F95AB020257488B7D /* HHZMD5Encryption.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHZMD5Encryption.m; path = HHZUtils/encryption/HHZMD5Encryption.m; sourceTree = "<group>"; };
+		5783BCE804F68F9E42B6F94483C8C869 /* HHZApplicationTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHZApplicationTool.h; path = HHZUtils/application/HHZApplicationTool.h; sourceTree = "<group>"; };
+		58CCA1B737D09DD70A09BCC0557E87C4 /* HHZBaseClass-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HHZBaseClass-dummy.m"; sourceTree = "<group>"; };
+		59335F60ABCFB4BA6F280F6B2BD5E7C1 /* HHZWeakProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHZWeakProxy.m; path = HHZBaseClass/others/HHZWeakProxy.m; sourceTree = "<group>"; };
+		5AC1F34F9366E95F1A482F210061A4BF /* UITableView+HHZCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableView+HHZCategory.h"; path = "HHZCategory/uikit/UITableView+HHZCategory.h"; sourceTree = "<group>"; };
+		5C0990CE9B85D00942E85DB432A3AD0B /* NSNumber+HHZCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+HHZCategory.m"; path = "HHZCategory/foundation/NSNumber+HHZCategory.m"; sourceTree = "<group>"; };
+		5D64A80C173502C5D0DBCF7AA993541E /* UILabel+HHZCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UILabel+HHZCategory.h"; path = "HHZCategory/uikit/UILabel+HHZCategory.h"; sourceTree = "<group>"; };
+		5D98580ABE60F41E395B0FF71FABF431 /* HHZArchiveTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHZArchiveTool.h; path = HHZUtils/archive/HHZArchiveTool.h; sourceTree = "<group>"; };
+		5FADF94F851C95F36086324556BF1BBF /* HHZMD5Encryption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHZMD5Encryption.h; path = HHZUtils/encryption/HHZMD5Encryption.h; sourceTree = "<group>"; };
+		60E8F7EC5DE48A2FE4C32C616D29C897 /* HHZKitTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHZKitTool.h; path = HHZUtils/kit/HHZKitTool.h; sourceTree = "<group>"; };
+		615F77B644D570F99B74A9B74A24EDF5 /* NSArray+HHZCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+HHZCategory.h"; path = "HHZCategory/foundation/NSArray+HHZCategory.h"; sourceTree = "<group>"; };
+		679AFF60EB0D6F535D816EF69E4C78F2 /* HHZEncrptionFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHZEncrptionFactory.h; path = HHZUtils/encryption/HHZEncrptionFactory.h; sourceTree = "<group>"; };
+		6AA92C72DAB508E0FAFD7D48C8A48C01 /* Pods-HHZPopupView-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HHZPopupView-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6BE75856089492665F1768610C3654EC /* HHZBase64Encrption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHZBase64Encrption.h; path = HHZUtils/encryption/HHZBase64Encrption.h; sourceTree = "<group>"; };
+		6EC513BB94FCFFB5684B1B73BFBDC94C /* HHZReachabilityTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHZReachabilityTool.m; path = HHZUtils/http/HHZReachabilityTool.m; sourceTree = "<group>"; };
+		7068BA20F37FE83CF2C4A31A1912BCD0 /* HHZAESEncryption.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHZAESEncryption.m; path = HHZUtils/encryption/HHZAESEncryption.m; sourceTree = "<group>"; };
+		778D9FAA6A85111631E011AD8D767B86 /* NSException+HHZCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSException+HHZCategory.h"; path = "HHZCategory/foundation/NSException+HHZCategory.h"; sourceTree = "<group>"; };
+		778F26D039288A5ED6E61C6356DF7412 /* GTMBase64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMBase64.h; path = HHZUtils/encryption/GTMBase64/GTMBase64.h; sourceTree = "<group>"; };
+		7A10AE25181AB4238E145AA95E1BC826 /* HHZEncrptionFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHZEncrptionFactory.m; path = HHZUtils/encryption/HHZEncrptionFactory.m; sourceTree = "<group>"; };
+		7A7CE1C7460DB2379D60DE96BF966B3B /* Pods-HHZPopupView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HHZPopupView.debug.xcconfig"; sourceTree = "<group>"; };
+		7EBEFF01AF289584BA24D16E64ADE936 /* UILabel+HHZCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UILabel+HHZCategory.m"; path = "HHZCategory/uikit/UILabel+HHZCategory.m"; sourceTree = "<group>"; };
+		7F7C13F67BC75C99BE3B8C18A627B06D /* HHZPlistTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHZPlistTool.m; path = HHZUtils/plist/HHZPlistTool.m; sourceTree = "<group>"; };
+		828B6A13A0593D983050FEBEFD536B90 /* HHZThreadSafeDictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHZThreadSafeDictionary.h; path = HHZUtils/system/HHZThreadSafeDictionary.h; sourceTree = "<group>"; };
+		8328E732BD916C62FD64AA3B6DB9BA50 /* HHZArchiveTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHZArchiveTool.m; path = HHZUtils/archive/HHZArchiveTool.m; sourceTree = "<group>"; };
+		84708EEA9C7E7F65A8F5D9DAA318514E /* HHZThreadSafeArray.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHZThreadSafeArray.h; path = HHZUtils/system/HHZThreadSafeArray.h; sourceTree = "<group>"; };
+		883C8A2D1355C3810D152DB65463391E /* Pods-HHZPopupView-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HHZPopupView-frameworks.sh"; sourceTree = "<group>"; };
+		88F598B421456420964FEE0813EF97DC /* HHZCookieGenerateUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHZCookieGenerateUtil.m; path = HHZUtils/cookie/HHZCookieGenerateUtil.m; sourceTree = "<group>"; };
+		9032D00A39CEE62F15DF3FC9F26CAE94 /* HHZLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHZLabel.m; path = HHZBaseClass/kit/HHZLabel.m; sourceTree = "<group>"; };
+		90B83656CE91F6299D1ED407641A5128 /* HHZDateTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHZDateTool.m; path = HHZUtils/date/HHZDateTool.m; sourceTree = "<group>"; };
+		91384D5B38C56411B17524248D0D2A47 /* HHZDeviceTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHZDeviceTool.m; path = HHZUtils/device/HHZDeviceTool.m; sourceTree = "<group>"; };
+		9364D67B74D5A4BBED2185E1308D5FB9 /* NSString+HHZCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+HHZCategory.h"; path = "HHZCategory/foundation/NSString+HHZCategory.h"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		941BE9AAFAC15A7793AFEC4F825F3957 /* HHZTableViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHZTableViewCell.m; path = HHZBaseClass/tableview/HHZTableViewCell.m; sourceTree = "<group>"; };
+		95174BF393E3E6ABAE9ED682A02A2188 /* HHZUtils.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HHZUtils.xcconfig; sourceTree = "<group>"; };
+		9650475BCBA2BC4489AD8794E2CDA055 /* NSDictionary+HHZCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+HHZCategory.h"; path = "HHZCategory/foundation/NSDictionary+HHZCategory.h"; sourceTree = "<group>"; };
+		96B37D544B04FE91303E0C037126F424 /* HHZNumericalTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHZNumericalTool.h; path = HHZUtils/numerical/HHZNumericalTool.h; sourceTree = "<group>"; };
+		987DD9CFE2BE05FE812FEA721868CEE9 /* NSNumber+HHZCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNumber+HHZCategory.h"; path = "HHZCategory/foundation/NSNumber+HHZCategory.h"; sourceTree = "<group>"; };
+		9A36BB5EAA6C75D1A323C4CFD1E144C3 /* UIScreen+Category.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScreen+Category.h"; path = "HHZCategory/uikit/UIScreen+Category.h"; sourceTree = "<group>"; };
+		9BD697E7EF42EE28FB4125D3BE0463D1 /* HHZDateTool_Format.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHZDateTool_Format.h; path = HHZUtils/date/HHZDateTool_Format.h; sourceTree = "<group>"; };
+		9CD113229F178E8FF4A4415EE97C2C75 /* HHZMethodException.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHZMethodException.m; path = HHZUtils/exception/HHZMethodException.m; sourceTree = "<group>"; };
+		9D4A7139DFC70EC5D77B3C8CD2FDB1A2 /* Pods-HHZPopupView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HHZPopupView-dummy.m"; sourceTree = "<group>"; };
+		A0F067106832EF75086B4B34701FE52C /* HHZDateTool_Format.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHZDateTool_Format.m; path = HHZUtils/date/HHZDateTool_Format.m; sourceTree = "<group>"; };
+		A9EDFA8AFF1C7296B0AEB81A05086FD0 /* NSNull+HHZCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNull+HHZCategory.h"; path = "HHZCategory/foundation/NSNull+HHZCategory.h"; sourceTree = "<group>"; };
+		AC5EC95759191FFC5877298E0C0AA429 /* HHZDESEncryption.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHZDESEncryption.m; path = HHZUtils/encryption/HHZDESEncryption.m; sourceTree = "<group>"; };
+		B03F17C0C7844D8E5CFB0C89A16B9327 /* HHZApplicationTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHZApplicationTool.m; path = HHZUtils/application/HHZApplicationTool.m; sourceTree = "<group>"; };
+		B0C24159B65159ECA3F7E304692EB12B /* GTMDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMDefines.h; path = HHZUtils/encryption/GTMBase64/GTMDefines.h; sourceTree = "<group>"; };
+		B4FF5D9AFB978E22592D0E93DA1030E5 /* HHZUtils-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HHZUtils-prefix.pch"; sourceTree = "<group>"; };
+		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		B68836BB9290C61C40749683BF04B581 /* NSObject+HHZCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+HHZCategory.m"; path = "HHZCategory/foundation/NSObject+HHZCategory.m"; sourceTree = "<group>"; };
+		B868E1598ED4F3BA851A18FB78F7DB1E /* UITableView+HHZCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView+HHZCategory.m"; path = "HHZCategory/uikit/UITableView+HHZCategory.m"; sourceTree = "<group>"; };
+		B987E6DC75A9E211AF9EACC63E407BF5 /* HHZUtils-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HHZUtils-dummy.m"; sourceTree = "<group>"; };
+		B9907A0EA154E26B100C461DA8BE6C63 /* HHZDateToolFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHZDateToolFactory.h; path = HHZUtils/date/HHZDateToolFactory.h; sourceTree = "<group>"; };
+		BE7F48399DE00C3A66DBEED91123A48F /* NSNotificationCenter+Category.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNotificationCenter+Category.h"; path = "HHZCategory/foundation/NSNotificationCenter+Category.h"; sourceTree = "<group>"; };
+		BF144A7D467BDD3485BE26DB83596846 /* HHZCalculateTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHZCalculateTool.h; path = HHZUtils/calculate/HHZCalculateTool.h; sourceTree = "<group>"; };
+		C516EBA9A69054985F0A717A39053D7E /* Pods-HHZPopupView-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HHZPopupView-acknowledgements.plist"; sourceTree = "<group>"; };
+		C5EE65B92902E6F07DE362D3668846DE /* UIView+HHZCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+HHZCategory.m"; path = "HHZCategory/uikit/UIView+HHZCategory.m"; sourceTree = "<group>"; };
+		C7F2E9E48D271BC40FB8B744B7AEFE15 /* NSArray+HHZCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+HHZCategory.m"; path = "HHZCategory/foundation/NSArray+HHZCategory.m"; sourceTree = "<group>"; };
+		CA132D42872EC671691D2395675720EB /* GTMBase64.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMBase64.m; path = HHZUtils/encryption/GTMBase64/GTMBase64.m; sourceTree = "<group>"; };
+		CA6BB03B0E8239DFB114CC0A76D0C2BD /* NSDictionary+HHZCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+HHZCategory.m"; path = "HHZCategory/foundation/NSDictionary+HHZCategory.m"; sourceTree = "<group>"; };
+		CB3F4DB5F8474881CBACBF55DF3C1C51 /* NSTimer+HHZCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSTimer+HHZCategory.m"; path = "HHZCategory/foundation/NSTimer+HHZCategory.m"; sourceTree = "<group>"; };
+		CC6CC364EB750972C3601FF3C44F3DE5 /* HHZWebViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHZWebViewController.h; path = HHZBaseClass/vc/HHZWebViewController.h; sourceTree = "<group>"; };
+		CDC0466AA0C44180EC1AC7260C94771F /* libHHZUtils.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libHHZUtils.a; path = libHHZUtils.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEE50633E81F8E26F1E2D22E31C3C186 /* HHZPathTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHZPathTool.h; path = HHZUtils/kit/HHZPathTool.h; sourceTree = "<group>"; };
+		CEE567E463088B558B983E63FA8C7EFD /* UIImageView+HHZCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+HHZCategory.m"; path = "HHZCategory/uikit/UIImageView+HHZCategory.m"; sourceTree = "<group>"; };
+		CFF281B42E675E5A136C6772E5A2AB6E /* UIButton+HHZCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+HHZCategory.h"; path = "HHZCategory/uikit/UIButton+HHZCategory.h"; sourceTree = "<group>"; };
+		D0E62B682FD930597B11576C308C4733 /* HHZCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHZCategory.h; path = HHZCategory/HHZCategory.h; sourceTree = "<group>"; };
+		D220EC01C20910013C4162E0FF0698F6 /* HHZBase64Encrption.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHZBase64Encrption.m; path = HHZUtils/encryption/HHZBase64Encrption.m; sourceTree = "<group>"; };
+		D354DF9A998B590BE636F394D58BA929 /* libHHZBaseClass.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libHHZBaseClass.a; path = libHHZBaseClass.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D54833E2F986BACE4E55954CD0F7AB49 /* UIImage+HHZCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+HHZCategory.h"; path = "HHZCategory/uikit/UIImage+HHZCategory.h"; sourceTree = "<group>"; };
+		D8758D04CAD04894C97F9929C729427D /* HHZTableView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHZTableView.m; path = HHZBaseClass/tableview/HHZTableView.m; sourceTree = "<group>"; };
+		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		DCA063893A10BB7012A748C9C244D971 /* HHZRegularTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHZRegularTool.m; path = HHZUtils/regular/HHZRegularTool.m; sourceTree = "<group>"; };
+		DCF8B6343AC1B8BB526B2DD371FCD220 /* Pods-HHZPopupView-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HHZPopupView-resources.sh"; sourceTree = "<group>"; };
+		DE641E1EDAF71AC01404F2676E67C421 /* NSString+HHZCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+HHZCategory.m"; path = "HHZCategory/foundation/NSString+HHZCategory.m"; sourceTree = "<group>"; };
+		E38CA446AFCF8BB12E6CD330AC472A28 /* HHZDateTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHZDateTool.h; path = HHZUtils/date/HHZDateTool.h; sourceTree = "<group>"; };
+		E64E31DC7EAC1049628F16CF856F8338 /* HHZDateToolFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHZDateToolFactory.m; path = HHZUtils/date/HHZDateToolFactory.m; sourceTree = "<group>"; };
+		E9FBF4DB15FCAD9F1321697DDE96A81E /* HHZMapTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHZMapTool.h; path = HHZUtils/kit/HHZMapTool.h; sourceTree = "<group>"; };
+		ED2E87B9A2F8D483EADCB55BD6EA8C2A /* libPods-HHZPopupView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-HHZPopupView.a"; path = "libPods-HHZPopupView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE8AFB872837334781664AC00CFEC9A4 /* HHZBaseClass-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HHZBaseClass-prefix.pch"; sourceTree = "<group>"; };
+		EF4526E3912EE8768D3D00A6D45C4AF5 /* HHZThreadSafeArray.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHZThreadSafeArray.m; path = HHZUtils/system/HHZThreadSafeArray.m; sourceTree = "<group>"; };
+		F16774B0CD257B88F5804B3156FA9CDD /* HHZAESEncryption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHZAESEncryption.h; path = HHZUtils/encryption/HHZAESEncryption.h; sourceTree = "<group>"; };
+		F351D937CA8499D93DEE39557EF159A8 /* Pods-HHZPopupView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HHZPopupView.release.xcconfig"; sourceTree = "<group>"; };
+		F3C14547CD7A10AB96E92C716CD274F4 /* HHZWebViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHZWebViewController.m; path = HHZBaseClass/vc/HHZWebViewController.m; sourceTree = "<group>"; };
+		F755A8A143AF5995C5EE0C63113F51DC /* libHHZCategory.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libHHZCategory.a; path = libHHZCategory.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA8DD4C6D9C4DEC38F9F476DAF3C5138 /* UIView+HHZCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+HHZCategory.h"; path = "HHZCategory/uikit/UIView+HHZCategory.h"; sourceTree = "<group>"; };
+		FE20B6D9D6815D6951F3F7B59B1B4C11 /* UIColor+HHZCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+HHZCategory.m"; path = "HHZCategory/uikit/UIColor+HHZCategory.m"; sourceTree = "<group>"; };
+		FFB22A21C56B6B24540726697C10AC55 /* NSNull+HHZCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNull+HHZCategory.m"; path = "HHZCategory/foundation/NSNull+HHZCategory.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2E03218BC9F10D772BDA7664A02EFE07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1B546A10F69D9E59AF295D29D2242F3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46AA55E36B9D4D6AFE0F064B11AD7FC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17FA85F9AF1CF75124B62B18F6258EB6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E8C00E243689778ED5EF5458D8E47F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABDAE8D372E090892B67FCCBBF3C2242 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8D6A79B5A08AFCBE569EBDF740CEA63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAFB58EA1EF836D724CAB3349E0637C3 /* Foundation.framework in Frameworks */,
+				CAFFC4E206663413D55BFB4D508BA64C /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F44F032871319F110FA5163116D3B09 /* exception */ = {
+			isa = PBXGroup;
+			children = (
+				188B89F89B7F59101C5ADBCDB1039591 /* HHZMethodException.h */,
+				9CD113229F178E8FF4A4415EE97C2C75 /* HHZMethodException.m */,
+			);
+			name = exception;
+			sourceTree = "<group>";
+		};
+		116E733A5C121EF70F2A9C1A2F93E8AD /* application */ = {
+			isa = PBXGroup;
+			children = (
+				5783BCE804F68F9E42B6F94483C8C869 /* HHZApplicationTool.h */,
+				B03F17C0C7844D8E5CFB0C89A16B9327 /* HHZApplicationTool.m */,
+			);
+			name = application;
+			sourceTree = "<group>";
+		};
+		2912E0070CAE645545A351FE5E136F97 /* archive */ = {
+			isa = PBXGroup;
+			children = (
+				5D98580ABE60F41E395B0FF71FABF431 /* HHZArchiveTool.h */,
+				8328E732BD916C62FD64AA3B6DB9BA50 /* HHZArchiveTool.m */,
+			);
+			name = archive;
+			sourceTree = "<group>";
+		};
+		2EE75B33B3C254FE744776F5F383FC0C /* uikit */ = {
+			isa = PBXGroup;
+			children = (
+				CFF281B42E675E5A136C6772E5A2AB6E /* UIButton+HHZCategory.h */,
+				434ED8A0CBE3758530091ED586D7A537 /* UIButton+HHZCategory.m */,
+				1C0241D10E7F7CDE094AF985B6F8E4CD /* UIColor+HHZCategory.h */,
+				FE20B6D9D6815D6951F3F7B59B1B4C11 /* UIColor+HHZCategory.m */,
+				D54833E2F986BACE4E55954CD0F7AB49 /* UIImage+HHZCategory.h */,
+				38D158DF88EB20D6C0698CC144ADD5E1 /* UIImage+HHZCategory.m */,
+				1E04A49C6376377DA43C133F133AA702 /* UIImageView+HHZCategory.h */,
+				CEE567E463088B558B983E63FA8C7EFD /* UIImageView+HHZCategory.m */,
+				5D64A80C173502C5D0DBCF7AA993541E /* UILabel+HHZCategory.h */,
+				7EBEFF01AF289584BA24D16E64ADE936 /* UILabel+HHZCategory.m */,
+				9A36BB5EAA6C75D1A323C4CFD1E144C3 /* UIScreen+Category.h */,
+				27C16DDAFD27F67006A8C382BA891515 /* UIScreen+Category.m */,
+				5AC1F34F9366E95F1A482F210061A4BF /* UITableView+HHZCategory.h */,
+				B868E1598ED4F3BA851A18FB78F7DB1E /* UITableView+HHZCategory.m */,
+				FA8DD4C6D9C4DEC38F9F476DAF3C5138 /* UIView+HHZCategory.h */,
+				C5EE65B92902E6F07DE362D3668846DE /* UIView+HHZCategory.m */,
+			);
+			name = uikit;
+			sourceTree = "<group>";
+		};
+		3BBD04B9181AA5D5D89B51DCE24BC49B /* http */ = {
+			isa = PBXGroup;
+			children = (
+				218BB7E8EA8E25D46204C396573A8DA2 /* HHZReachabilityTool.h */,
+				6EC513BB94FCFFB5684B1B73BFBDC94C /* HHZReachabilityTool.m */,
+			);
+			name = http;
+			sourceTree = "<group>";
+		};
+		3CD2B3BAC92B6A7064B57983E8E60EF8 /* date */ = {
+			isa = PBXGroup;
+			children = (
+				E38CA446AFCF8BB12E6CD330AC472A28 /* HHZDateTool.h */,
+				90B83656CE91F6299D1ED407641A5128 /* HHZDateTool.m */,
+				9BD697E7EF42EE28FB4125D3BE0463D1 /* HHZDateTool_Format.h */,
+				A0F067106832EF75086B4B34701FE52C /* HHZDateTool_Format.m */,
+				B9907A0EA154E26B100C461DA8BE6C63 /* HHZDateToolFactory.h */,
+				E64E31DC7EAC1049628F16CF856F8338 /* HHZDateToolFactory.m */,
+			);
+			name = date;
+			sourceTree = "<group>";
+		};
+		3DFE8A581E01257151215161BCDB7BD5 /* tableview */ = {
+			isa = PBXGroup;
+			children = (
+				42477F3EBF90DDE2DB8CDBBA09824A5F /* HHZTableView.h */,
+				D8758D04CAD04894C97F9929C729427D /* HHZTableView.m */,
+				03B7468B74E09B2668BB1E7E68465F2B /* HHZTableViewCell.h */,
+				941BE9AAFAC15A7793AFEC4F825F3957 /* HHZTableViewCell.m */,
+			);
+			name = tableview;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				438B396F6B4147076630CAEFE34282C1 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		438B396F6B4147076630CAEFE34282C1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */,
+				B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		4A870424B3997F3C6FCF3823DB42B8B3 /* plist */ = {
+			isa = PBXGroup;
+			children = (
+				1F3F8D280094ADE3A4A8DA398E44A1A8 /* HHZPlistTool.h */,
+				7F7C13F67BC75C99BE3B8C18A627B06D /* HHZPlistTool.m */,
+			);
+			name = plist;
+			sourceTree = "<group>";
+		};
+		557E9F98DEC9F809A2E2EF54AF6E3B1A /* vc */ = {
+			isa = PBXGroup;
+			children = (
+				13885433CD08A7C1920B70C6E88EC809 /* HHZViewController.h */,
+				2C34E7F42A3230C3152EE97115A00FF7 /* HHZViewController.m */,
+				CC6CC364EB750972C3601FF3C44F3DE5 /* HHZWebViewController.h */,
+				F3C14547CD7A10AB96E92C716CD274F4 /* HHZWebViewController.m */,
+			);
+			name = vc;
+			sourceTree = "<group>";
+		};
+		562AF792DAD1BE3A4362C79FE821715C /* cookie */ = {
+			isa = PBXGroup;
+			children = (
+				14194FC7D7B5BBD05668506B8ED1FECC /* HHZCookieGenerateUtil.h */,
+				88F598B421456420964FEE0813EF97DC /* HHZCookieGenerateUtil.m */,
+			);
+			name = cookie;
+			sourceTree = "<group>";
+		};
+		590E91F8A8BDBD4F3346616F1F3AF6B0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4886948CA613C794B293115F1DE9C9EC /* HHZCategory.xcconfig */,
+				384B4F2C0859A23E9C94204CAC7FDB5D /* HHZCategory-dummy.m */,
+				323AE70B2EDB5EEA91E7EDF422BC9C82 /* HHZCategory-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/HHZCategory";
+			sourceTree = "<group>";
+		};
+		59DB1A3A18C7221A2C4EA7D17C25BB0F /* file */ = {
+			isa = PBXGroup;
+			children = (
+				0381434A5F933886084EB3E08CB3D032 /* HHZFileHashTool.h */,
+				4D96E823D00B36DDC8D9D17FCECFECAA /* HHZFileHashTool.m */,
+			);
+			name = file;
+			sourceTree = "<group>";
+		};
+		65A2A6621E46A23EB03A317E94F8D2A8 /* kit */ = {
+			isa = PBXGroup;
+			children = (
+				60E8F7EC5DE48A2FE4C32C616D29C897 /* HHZKitTool.h */,
+				420C291B8491D5AD03BA7D1847B605C8 /* HHZKitTool.m */,
+				E9FBF4DB15FCAD9F1321697DDE96A81E /* HHZMapTool.h */,
+				3A22DA3EB613694D02ED29B27E0D21EB /* HHZMapTool.m */,
+				CEE50633E81F8E26F1E2D22E31C3C186 /* HHZPathTool.h */,
+				1DE2B26DB4D214B80620846DED5D5787 /* HHZPathTool.m */,
+			);
+			name = kit;
+			sourceTree = "<group>";
+		};
+		7062D42500B662A9285622376938D317 /* encryption */ = {
+			isa = PBXGroup;
+			children = (
+				F16774B0CD257B88F5804B3156FA9CDD /* HHZAESEncryption.h */,
+				7068BA20F37FE83CF2C4A31A1912BCD0 /* HHZAESEncryption.m */,
+				6BE75856089492665F1768610C3654EC /* HHZBase64Encrption.h */,
+				D220EC01C20910013C4162E0FF0698F6 /* HHZBase64Encrption.m */,
+				14647C4F3093B43169022248D770318A /* HHZDESEncryption.h */,
+				AC5EC95759191FFC5877298E0C0AA429 /* HHZDESEncryption.m */,
+				679AFF60EB0D6F535D816EF69E4C78F2 /* HHZEncrptionFactory.h */,
+				7A10AE25181AB4238E145AA95E1BC826 /* HHZEncrptionFactory.m */,
+				5FADF94F851C95F36086324556BF1BBF /* HHZMD5Encryption.h */,
+				553B7D44B3A4376F95AB020257488B7D /* HHZMD5Encryption.m */,
+				735F30B44B7A45E1A132E0A06C0C8ED1 /* GTMBase64 */,
+			);
+			name = encryption;
+			sourceTree = "<group>";
+		};
+		735F30B44B7A45E1A132E0A06C0C8ED1 /* GTMBase64 */ = {
+			isa = PBXGroup;
+			children = (
+				778F26D039288A5ED6E61C6356DF7412 /* GTMBase64.h */,
+				CA132D42872EC671691D2395675720EB /* GTMBase64.m */,
+				B0C24159B65159ECA3F7E304692EB12B /* GTMDefines.h */,
+			);
+			name = GTMBase64;
+			sourceTree = "<group>";
+		};
+		784BDE4F4D21AFD5B7FAE2238018EBE5 /* device */ = {
+			isa = PBXGroup;
+			children = (
+				2410A69678DB1707156A1E34FB0451C9 /* HHZDeviceTool.h */,
+				91384D5B38C56411B17524248D0D2A47 /* HHZDeviceTool.m */,
+			);
+			name = device;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				AF50A04DDB12CE8FD7EA06C49B846206 /* Pods */,
+				EDB3E8C94B73F04F2E370FDE6E008131 /* Products */,
+				B3712E1AAD204BE9449D0CE3B0748BDD /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		934468076B829190CD5EC7AAC57073F2 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				95174BF393E3E6ABAE9ED682A02A2188 /* HHZUtils.xcconfig */,
+				B987E6DC75A9E211AF9EACC63E407BF5 /* HHZUtils-dummy.m */,
+				B4FF5D9AFB978E22592D0E93DA1030E5 /* HHZUtils-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/HHZUtils";
+			sourceTree = "<group>";
+		};
+		99CCEA118C91CA1B557A6463187B6623 /* foundation */ = {
+			isa = PBXGroup;
+			children = (
+				615F77B644D570F99B74A9B74A24EDF5 /* NSArray+HHZCategory.h */,
+				C7F2E9E48D271BC40FB8B744B7AEFE15 /* NSArray+HHZCategory.m */,
+				9650475BCBA2BC4489AD8794E2CDA055 /* NSDictionary+HHZCategory.h */,
+				CA6BB03B0E8239DFB114CC0A76D0C2BD /* NSDictionary+HHZCategory.m */,
+				778D9FAA6A85111631E011AD8D767B86 /* NSException+HHZCategory.h */,
+				47DD13BB96C49950566719A94E430A15 /* NSException+HHZCategory.m */,
+				BE7F48399DE00C3A66DBEED91123A48F /* NSNotificationCenter+Category.h */,
+				29BBDC8EFEB2F2755C3D6B3500611F9D /* NSNotificationCenter+Category.m */,
+				A9EDFA8AFF1C7296B0AEB81A05086FD0 /* NSNull+HHZCategory.h */,
+				FFB22A21C56B6B24540726697C10AC55 /* NSNull+HHZCategory.m */,
+				987DD9CFE2BE05FE812FEA721868CEE9 /* NSNumber+HHZCategory.h */,
+				5C0990CE9B85D00942E85DB432A3AD0B /* NSNumber+HHZCategory.m */,
+				3F23556AA99038D05F61913607299D18 /* NSObject+HHZCategory.h */,
+				B68836BB9290C61C40749683BF04B581 /* NSObject+HHZCategory.m */,
+				9364D67B74D5A4BBED2185E1308D5FB9 /* NSString+HHZCategory.h */,
+				DE641E1EDAF71AC01404F2676E67C421 /* NSString+HHZCategory.m */,
+				442D605A15F90B53AEE1807C8EB01461 /* NSTimer+HHZCategory.h */,
+				CB3F4DB5F8474881CBACBF55DF3C1C51 /* NSTimer+HHZCategory.m */,
+			);
+			name = foundation;
+			sourceTree = "<group>";
+		};
+		9ADB3ACC79E8BBE6D61A789CA5380613 /* others */ = {
+			isa = PBXGroup;
+			children = (
+				1E2A95DD4265A6F79683355474555AE3 /* HHZWeakProxy.h */,
+				59335F60ABCFB4BA6F280F6B2BD5E7C1 /* HHZWeakProxy.m */,
+			);
+			name = others;
+			sourceTree = "<group>";
+		};
+		A4AF3D8B54BDC6A1F7AAFBAB54545E9C /* kit */ = {
+			isa = PBXGroup;
+			children = (
+				4C437D3C4C1EA78CB96E582938BFFCCB /* HHZLabel.h */,
+				9032D00A39CEE62F15DF3FC9F26CAE94 /* HHZLabel.m */,
+			);
+			name = kit;
+			sourceTree = "<group>";
+		};
+		A506EE6BE8B5336BB13AB2882F610B51 /* Pods-HHZPopupView */ = {
+			isa = PBXGroup;
+			children = (
+				6AA92C72DAB508E0FAFD7D48C8A48C01 /* Pods-HHZPopupView-acknowledgements.markdown */,
+				C516EBA9A69054985F0A717A39053D7E /* Pods-HHZPopupView-acknowledgements.plist */,
+				9D4A7139DFC70EC5D77B3C8CD2FDB1A2 /* Pods-HHZPopupView-dummy.m */,
+				883C8A2D1355C3810D152DB65463391E /* Pods-HHZPopupView-frameworks.sh */,
+				DCF8B6343AC1B8BB526B2DD371FCD220 /* Pods-HHZPopupView-resources.sh */,
+				7A7CE1C7460DB2379D60DE96BF966B3B /* Pods-HHZPopupView.debug.xcconfig */,
+				F351D937CA8499D93DEE39557EF159A8 /* Pods-HHZPopupView.release.xcconfig */,
+			);
+			name = "Pods-HHZPopupView";
+			path = "Target Support Files/Pods-HHZPopupView";
+			sourceTree = "<group>";
+		};
+		A9C0C72AB2E28983700E8758683F0680 /* numerical */ = {
+			isa = PBXGroup;
+			children = (
+				96B37D544B04FE91303E0C037126F424 /* HHZNumericalTool.h */,
+				41DC8673F75C717EB363B360DBD0EAED /* HHZNumericalTool.m */,
+			);
+			name = numerical;
+			sourceTree = "<group>";
+		};
+		AD2097755408ADE0C06B6BB012689997 /* json */ = {
+			isa = PBXGroup;
+			children = (
+				15771371F72BEC8EB38B7D8B09A16C26 /* HHZJSONTool.h */,
+				0200F3ECDBEEAFCF6F86720D33E3500E /* HHZJSONTool.m */,
+			);
+			name = json;
+			sourceTree = "<group>";
+		};
+		AF1935C768EA30DB33910E68D3192E97 /* HHZCategory */ = {
+			isa = PBXGroup;
+			children = (
+				D0E62B682FD930597B11576C308C4733 /* HHZCategory.h */,
+				99CCEA118C91CA1B557A6463187B6623 /* foundation */,
+				590E91F8A8BDBD4F3346616F1F3AF6B0 /* Support Files */,
+				2EE75B33B3C254FE744776F5F383FC0C /* uikit */,
+			);
+			name = HHZCategory;
+			path = HHZCategory;
+			sourceTree = "<group>";
+		};
+		AF50A04DDB12CE8FD7EA06C49B846206 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E9AC26F29DDF5FA8B82D2778070CEE41 /* HHZBaseClass */,
+				AF1935C768EA30DB33910E68D3192E97 /* HHZCategory */,
+				DC731F8D85D3687F74EAD4055E597706 /* HHZUtils */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B0B251FB11AB74E049C3FEA17E68A5A6 /* system */ = {
+			isa = PBXGroup;
+			children = (
+				84708EEA9C7E7F65A8F5D9DAA318514E /* HHZThreadSafeArray.h */,
+				EF4526E3912EE8768D3D00A6D45C4AF5 /* HHZThreadSafeArray.m */,
+				828B6A13A0593D983050FEBEFD536B90 /* HHZThreadSafeDictionary.h */,
+				295CBCD16BF35A69F14EF7761001F19F /* HHZThreadSafeDictionary.m */,
+			);
+			name = system;
+			sourceTree = "<group>";
+		};
+		B1F8992D9D716ECA21A37D2C7800C7D7 /* regular */ = {
+			isa = PBXGroup;
+			children = (
+				43293C32ADC04283F2AF8A8EB7689B40 /* HHZRegularTool.h */,
+				DCA063893A10BB7012A748C9C244D971 /* HHZRegularTool.m */,
+			);
+			name = regular;
+			sourceTree = "<group>";
+		};
+		B3712E1AAD204BE9449D0CE3B0748BDD /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A506EE6BE8B5336BB13AB2882F610B51 /* Pods-HHZPopupView */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		DC731F8D85D3687F74EAD4055E597706 /* HHZUtils */ = {
+			isa = PBXGroup;
+			children = (
+				116E733A5C121EF70F2A9C1A2F93E8AD /* application */,
+				2912E0070CAE645545A351FE5E136F97 /* archive */,
+				E60E8FF8DEF9B79E4BD2856C4FE37217 /* calculate */,
+				562AF792DAD1BE3A4362C79FE821715C /* cookie */,
+				3CD2B3BAC92B6A7064B57983E8E60EF8 /* date */,
+				784BDE4F4D21AFD5B7FAE2238018EBE5 /* device */,
+				7062D42500B662A9285622376938D317 /* encryption */,
+				0F44F032871319F110FA5163116D3B09 /* exception */,
+				59DB1A3A18C7221A2C4EA7D17C25BB0F /* file */,
+				3BBD04B9181AA5D5D89B51DCE24BC49B /* http */,
+				AD2097755408ADE0C06B6BB012689997 /* json */,
+				65A2A6621E46A23EB03A317E94F8D2A8 /* kit */,
+				A9C0C72AB2E28983700E8758683F0680 /* numerical */,
+				4A870424B3997F3C6FCF3823DB42B8B3 /* plist */,
+				B1F8992D9D716ECA21A37D2C7800C7D7 /* regular */,
+				934468076B829190CD5EC7AAC57073F2 /* Support Files */,
+				B0B251FB11AB74E049C3FEA17E68A5A6 /* system */,
+			);
+			name = HHZUtils;
+			path = HHZUtils;
+			sourceTree = "<group>";
+		};
+		E60E8FF8DEF9B79E4BD2856C4FE37217 /* calculate */ = {
+			isa = PBXGroup;
+			children = (
+				BF144A7D467BDD3485BE26DB83596846 /* HHZCalculateTool.h */,
+				1DFC22EED2D7A792CA3765B6FCE74981 /* HHZCalculateTool.m */,
+			);
+			name = calculate;
+			sourceTree = "<group>";
+		};
+		E9AC26F29DDF5FA8B82D2778070CEE41 /* HHZBaseClass */ = {
+			isa = PBXGroup;
+			children = (
+				A4AF3D8B54BDC6A1F7AAFBAB54545E9C /* kit */,
+				F8A9EB6DF5036AF85E19BF4B04F6F1B4 /* navi */,
+				9ADB3ACC79E8BBE6D61A789CA5380613 /* others */,
+				F15383C26DB51425D3B2C87969451024 /* Support Files */,
+				3DFE8A581E01257151215161BCDB7BD5 /* tableview */,
+				557E9F98DEC9F809A2E2EF54AF6E3B1A /* vc */,
+			);
+			name = HHZBaseClass;
+			path = HHZBaseClass;
+			sourceTree = "<group>";
+		};
+		EDB3E8C94B73F04F2E370FDE6E008131 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D354DF9A998B590BE636F394D58BA929 /* libHHZBaseClass.a */,
+				F755A8A143AF5995C5EE0C63113F51DC /* libHHZCategory.a */,
+				CDC0466AA0C44180EC1AC7260C94771F /* libHHZUtils.a */,
+				ED2E87B9A2F8D483EADCB55BD6EA8C2A /* libPods-HHZPopupView.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F15383C26DB51425D3B2C87969451024 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				45E8AE14BBF6A89597FA6BC83BDE3879 /* HHZBaseClass.xcconfig */,
+				58CCA1B737D09DD70A09BCC0557E87C4 /* HHZBaseClass-dummy.m */,
+				EE8AFB872837334781664AC00CFEC9A4 /* HHZBaseClass-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/HHZBaseClass";
+			sourceTree = "<group>";
+		};
+		F8A9EB6DF5036AF85E19BF4B04F6F1B4 /* navi */ = {
+			isa = PBXGroup;
+			children = (
+				1DBDE214D70ACEB77DFA647ABDBB5D0D /* HHZNavigationController.h */,
+				0B392FDE9A2CE59914722A70C97B1547 /* HHZNavigationController.m */,
+			);
+			name = navi;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		717188A4505744A9D90D172E083E2D75 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE2C243EAB6A84BE2087B972378886D2 /* HHZLabel.h in Headers */,
+				3CA8EC53E42332793B2F39256B58C803 /* HHZNavigationController.h in Headers */,
+				3E9AEAFF53741C05D34269DF3928E01D /* HHZTableView.h in Headers */,
+				352BF54200E14F4AD93A7D5B80101ED7 /* HHZTableViewCell.h in Headers */,
+				3EF9A492EDDB97E6D739108186BB23C6 /* HHZViewController.h in Headers */,
+				EC5395CF365B1E0CB8BA2854F75F3B0A /* HHZWeakProxy.h in Headers */,
+				B8F5CA45200E8A631D778C8A036E70A6 /* HHZWebViewController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A935B4FBAFD16D58DAB2C014BDED104 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D490EF093716E4B45723C8192964B5B6 /* HHZCategory.h in Headers */,
+				B05A727397228430ACA1BF9419BC86BA /* NSArray+HHZCategory.h in Headers */,
+				EED228AD798EC87A6D57EAA29877F3AD /* NSDictionary+HHZCategory.h in Headers */,
+				B282C33A34BA744A6F3D50972100FC41 /* NSException+HHZCategory.h in Headers */,
+				D025856F83529A2471CA650019107329 /* NSNotificationCenter+Category.h in Headers */,
+				0726E3315856880CADCCFFE4BB1D710A /* NSNull+HHZCategory.h in Headers */,
+				29AD62EA3AC03E5799E008F04FEC317C /* NSNumber+HHZCategory.h in Headers */,
+				6595A1083F922A5008513AB85CEF5B77 /* NSObject+HHZCategory.h in Headers */,
+				5C2E5C8766CF586AAE696FC4AA9A3B66 /* NSString+HHZCategory.h in Headers */,
+				C8077E1BC7992F1A5867C573F7664370 /* NSTimer+HHZCategory.h in Headers */,
+				8FC98AC24E8C87283352A6E8458F8C09 /* UIButton+HHZCategory.h in Headers */,
+				14C70B2545B2D450EF94992BF88CD6C4 /* UIColor+HHZCategory.h in Headers */,
+				B0C23E83D9C000C14F674E0FE6DB4326 /* UIImage+HHZCategory.h in Headers */,
+				F7D96E3732C38D56BB61C3EB16A29ED1 /* UIImageView+HHZCategory.h in Headers */,
+				C822928659FAD2E6A02ED50A06E239E7 /* UILabel+HHZCategory.h in Headers */,
+				B67453224BC018112B7089C5ED4708C5 /* UIScreen+Category.h in Headers */,
+				05CEFB18667C6E26D45E670517977AB9 /* UITableView+HHZCategory.h in Headers */,
+				EF49414D823E1B1D868DE7A866B642F5 /* UIView+HHZCategory.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD63F3E2B30CCF65C24858CCF808011F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1B5BEF8C603EB8ED20B152EC0C8C5D7 /* GTMBase64.h in Headers */,
+				A91EB4647027DA29B49FAF9E2A226396 /* GTMDefines.h in Headers */,
+				CFEF9D6CF17AD1540573CFEB3B308E2F /* HHZAESEncryption.h in Headers */,
+				1BDDDB0F53D2BF5AAC09AB4E650E8AA0 /* HHZApplicationTool.h in Headers */,
+				BDA1D3E6B31BA9E7477574E98667A93C /* HHZArchiveTool.h in Headers */,
+				A42F06F3189E70BC809E43AFA8950DFB /* HHZBase64Encrption.h in Headers */,
+				AF679C0A7BCD138EC7CE47AA90532B60 /* HHZCalculateTool.h in Headers */,
+				2FE14FB17BE0F8CCA4BB4DBD4ACCA1D1 /* HHZCookieGenerateUtil.h in Headers */,
+				51E09763F52EA8C1D375F76A399AB5BE /* HHZDateTool.h in Headers */,
+				ACFA41AED4672C6C6EC7062573327A5D /* HHZDateTool_Format.h in Headers */,
+				69F488FB98B59D8537E09FC1A2D6BC1D /* HHZDateToolFactory.h in Headers */,
+				B86923E65F7F9998AEDA3AA6E6444262 /* HHZDESEncryption.h in Headers */,
+				F14ED2747E489D1BE90F732115E6F82D /* HHZDeviceTool.h in Headers */,
+				A8075CC4D066136B3B16B636F152FE5D /* HHZEncrptionFactory.h in Headers */,
+				733C2B7CA7D4FE269C087E63B29E1662 /* HHZFileHashTool.h in Headers */,
+				5DBDBDED80585381BC0FEF4F87164F7E /* HHZJSONTool.h in Headers */,
+				D86F696E1D05BEC86CA7E0CC888EC6D3 /* HHZKitTool.h in Headers */,
+				079DF74E495830A3BFB2AA5693735540 /* HHZMapTool.h in Headers */,
+				701F88403E7F453CFB8BE55B69582222 /* HHZMD5Encryption.h in Headers */,
+				91BBCFB937B50B4FE2BE30FAC71C3280 /* HHZMethodException.h in Headers */,
+				810FD2586311EB507CFA356DD53C8902 /* HHZNumericalTool.h in Headers */,
+				EE0990D10740D7AEB3E1336BD514C511 /* HHZPathTool.h in Headers */,
+				BE4BE35EE8B61EBD69343671DB2F19CF /* HHZPlistTool.h in Headers */,
+				D268AF1CC00196BA11E2EE136901D926 /* HHZReachabilityTool.h in Headers */,
+				DD7E42B2928FE8324E214546B3F48484 /* HHZRegularTool.h in Headers */,
+				30DE9E8FD8669DC9940E4314A3D3E559 /* HHZThreadSafeArray.h in Headers */,
+				46639088A87F912D456A062420243850 /* HHZThreadSafeDictionary.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5E5A61EC6F435DD710D414621413A25C /* Pods-HHZPopupView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4920DC161ED3D0180FC4C3081654EC6A /* Build configuration list for PBXNativeTarget "Pods-HHZPopupView" */;
+			buildPhases = (
+				D0770D506C174373F004F3F85DF20F62 /* Sources */,
+				5E8C00E243689778ED5EF5458D8E47F3 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				523C8176F246BC6B19D533791AD1F893 /* PBXTargetDependency */,
+				D9E2DA96AC1DBAA038CD0B831F6D6C75 /* PBXTargetDependency */,
+				7A3C8BD3C14A9391C426B0841F61451C /* PBXTargetDependency */,
+			);
+			name = "Pods-HHZPopupView";
+			productName = "Pods-HHZPopupView";
+			productReference = ED2E87B9A2F8D483EADCB55BD6EA8C2A /* libPods-HHZPopupView.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B14067D386E5B02DD4E0B4123CB28A5B /* HHZCategory */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 947098854439389F3288993864DBBBD1 /* Build configuration list for PBXNativeTarget "HHZCategory" */;
+			buildPhases = (
+				E6788D51215573C8B36D6544B5AB5456 /* Sources */,
+				46AA55E36B9D4D6AFE0F064B11AD7FC7 /* Frameworks */,
+				7A935B4FBAFD16D58DAB2C014BDED104 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HHZCategory;
+			productName = HHZCategory;
+			productReference = F755A8A143AF5995C5EE0C63113F51DC /* libHHZCategory.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		C55A5CADA8AFB476398B7B2350CD32D7 /* HHZBaseClass */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17719EA82343B42978535C43DA6DEFBC /* Build configuration list for PBXNativeTarget "HHZBaseClass" */;
+			buildPhases = (
+				A5736E0647190C64914D7C6677860CC0 /* Sources */,
+				2E03218BC9F10D772BDA7664A02EFE07 /* Frameworks */,
+				717188A4505744A9D90D172E083E2D75 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HHZBaseClass;
+			productName = HHZBaseClass;
+			productReference = D354DF9A998B590BE636F394D58BA929 /* libHHZBaseClass.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F680E6685F30569E9729FB0E9154EC98 /* HHZUtils */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7346B20AD17917CC8648768071F76FEE /* Build configuration list for PBXNativeTarget "HHZUtils" */;
+			buildPhases = (
+				CB69E7CA6334D14AE996A4C7BA3A2316 /* Sources */,
+				A8D6A79B5A08AFCBE569EBDF740CEA63 /* Frameworks */,
+				FD63F3E2B30CCF65C24858CCF808011F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HHZUtils;
+			productName = HHZUtils;
+			productReference = CDC0466AA0C44180EC1AC7260C94771F /* libHHZUtils.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = EDB3E8C94B73F04F2E370FDE6E008131 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C55A5CADA8AFB476398B7B2350CD32D7 /* HHZBaseClass */,
+				B14067D386E5B02DD4E0B4123CB28A5B /* HHZCategory */,
+				F680E6685F30569E9729FB0E9154EC98 /* HHZUtils */,
+				5E5A61EC6F435DD710D414621413A25C /* Pods-HHZPopupView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A5736E0647190C64914D7C6677860CC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1FF47384DD5D2E8C0806DE9DA46C178 /* HHZBaseClass-dummy.m in Sources */,
+				3EAB2EB637F4F1C48AE81647041D6A24 /* HHZLabel.m in Sources */,
+				2E6AA84AF82386311D7D4EEF072D3BB2 /* HHZNavigationController.m in Sources */,
+				6AF730A72D95C3732799E7AC2ADBC6DC /* HHZTableView.m in Sources */,
+				CFF73DBF5139FB29C988A4DCA649C021 /* HHZTableViewCell.m in Sources */,
+				623E5C325F5149B4DF7E6B0D03E6A5FC /* HHZViewController.m in Sources */,
+				B6CA65D03043D2E2BB0D3127776EA9F1 /* HHZWeakProxy.m in Sources */,
+				E033624129D02444663E8B6801B04700 /* HHZWebViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB69E7CA6334D14AE996A4C7BA3A2316 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D486877D84FCE4602B21D1F356573AE /* GTMBase64.m in Sources */,
+				EFAD95A91FF671AD39ADD8CCAB8EA340 /* HHZAESEncryption.m in Sources */,
+				00B96E3629ED2D534B131E69D481A866 /* HHZApplicationTool.m in Sources */,
+				E4FBB65D97A56AD881D8D10CC2D6E79F /* HHZArchiveTool.m in Sources */,
+				EFBA8A676F8EC593DE4902CA68AE86F8 /* HHZBase64Encrption.m in Sources */,
+				E2CB3E060D788B8122C8FA1F14CCBB5B /* HHZCalculateTool.m in Sources */,
+				4A635BDDB88DD663885CA219F2C3FBF2 /* HHZCookieGenerateUtil.m in Sources */,
+				C0FC5B94B1919A44C4F3583A743B299E /* HHZDateTool.m in Sources */,
+				C1CF3F27A71E81B5F58B36100D76654A /* HHZDateTool_Format.m in Sources */,
+				05E0F88E47EA7DE2F82063C025F3D37C /* HHZDateToolFactory.m in Sources */,
+				CAFE7F18B9ED042C2618CD36087EAB89 /* HHZDESEncryption.m in Sources */,
+				F7F76F765BD7709BC5D3247ACA5CD2B8 /* HHZDeviceTool.m in Sources */,
+				198735A135FCC7F2A1B23C05B80F5244 /* HHZEncrptionFactory.m in Sources */,
+				05CCACA485C68327E289E6D086452A58 /* HHZFileHashTool.m in Sources */,
+				C62F6B6FE0AA91AAC7F8ACEE07D98C35 /* HHZJSONTool.m in Sources */,
+				FC72F83C88176998CAEB4AA28AC076E0 /* HHZKitTool.m in Sources */,
+				94AAF961C456FAB9605B3142C70EC6FE /* HHZMapTool.m in Sources */,
+				B7262E14D47D3A616C894800D4C62AD7 /* HHZMD5Encryption.m in Sources */,
+				5BF6FD8502BE4B3AA376C5B65E1C8084 /* HHZMethodException.m in Sources */,
+				75AFE44FE4DF95949D9D55E2877484CC /* HHZNumericalTool.m in Sources */,
+				0C695A7588B113EF9CC4D691437425AC /* HHZPathTool.m in Sources */,
+				5BFF7D746D16B722D058D878CCB2B723 /* HHZPlistTool.m in Sources */,
+				B13AABD876461FC3896727E0958E11AC /* HHZReachabilityTool.m in Sources */,
+				882A802A0962E3DB5EAA78D18B3DA794 /* HHZRegularTool.m in Sources */,
+				06CD5839311037A2690D2320B62C6E1E /* HHZThreadSafeArray.m in Sources */,
+				C0465F417F8A74EF9841326D9D8EF0B3 /* HHZThreadSafeDictionary.m in Sources */,
+				326DD60CE97CE50E1160FE0CF76DFDDC /* HHZUtils-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0770D506C174373F004F3F85DF20F62 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C1322C5C0993ED4FFC636976657201A /* Pods-HHZPopupView-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6788D51215573C8B36D6544B5AB5456 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF3EF4DB1720B0313BC549E50E23D02A /* HHZCategory-dummy.m in Sources */,
+				E8C728882173ED14C833DD92D184BE9E /* NSArray+HHZCategory.m in Sources */,
+				237A150BF3E20CCD046BF77906C5CF4E /* NSDictionary+HHZCategory.m in Sources */,
+				7315E0FB37F7CCDD67E913CBB8C6EA0C /* NSException+HHZCategory.m in Sources */,
+				311E41A6BF2FB711C295CE458A9979D5 /* NSNotificationCenter+Category.m in Sources */,
+				8BE18D82F23F13A6F49839AB6420810B /* NSNull+HHZCategory.m in Sources */,
+				4D79D2218B34A4D85610296F546432EB /* NSNumber+HHZCategory.m in Sources */,
+				ECBC7550D54E6860EE79B250DAF6F310 /* NSObject+HHZCategory.m in Sources */,
+				D67B4DD3A907C6494286F189CA27C442 /* NSString+HHZCategory.m in Sources */,
+				6B9964B084322D4609C9C72587E0A640 /* NSTimer+HHZCategory.m in Sources */,
+				3D886F9E46C55CDA1E5D0B8A16028DCA /* UIButton+HHZCategory.m in Sources */,
+				E048A051095698A7E1A49ABDAA13395B /* UIColor+HHZCategory.m in Sources */,
+				AABE8124837F51C2BD707B0981DC55C2 /* UIImage+HHZCategory.m in Sources */,
+				BF15A38702716484FEEBFA9C534D6859 /* UIImageView+HHZCategory.m in Sources */,
+				D332B17D66FDD617C2C71BD43150865D /* UILabel+HHZCategory.m in Sources */,
+				98747F2368325CC08E2A170CDABFD01B /* UIScreen+Category.m in Sources */,
+				5698CFA9217346B7F3B3A73B2B2962C6 /* UITableView+HHZCategory.m in Sources */,
+				7DEC2B43EC8B92E2F2917692115C3504 /* UIView+HHZCategory.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		523C8176F246BC6B19D533791AD1F893 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HHZBaseClass;
+			target = C55A5CADA8AFB476398B7B2350CD32D7 /* HHZBaseClass */;
+			targetProxy = 9814E5EDD0FA777962E60531C1CBE85E /* PBXContainerItemProxy */;
+		};
+		7A3C8BD3C14A9391C426B0841F61451C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HHZUtils;
+			target = F680E6685F30569E9729FB0E9154EC98 /* HHZUtils */;
+			targetProxy = B00E79B4FFEEC9A59BD1D1A2375F43BF /* PBXContainerItemProxy */;
+		};
+		D9E2DA96AC1DBAA038CD0B831F6D6C75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HHZCategory;
+			target = B14067D386E5B02DD4E0B4123CB28A5B /* HHZCategory */;
+			targetProxy = 8FBE54F10F2934F44C84C957AD011AB2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		06561D502CF8541DEC6FBBA072CD6FD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45E8AE14BBF6A89597FA6BC83BDE3879 /* HHZBaseClass.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/HHZBaseClass/HHZBaseClass-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+			};
+			name = Release;
+		};
+		0AA14B86FAF70E79CC2E03B2B9DE6EFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95174BF393E3E6ABAE9ED682A02A2188 /* HHZUtils.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/HHZUtils/HHZUtils-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+			};
+			name = Debug;
+		};
+		1C7D17A37D091C98D2F0DD886C3A9320 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		34EF34924A911C1D3DFFFF2E82024FBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95174BF393E3E6ABAE9ED682A02A2188 /* HHZUtils.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/HHZUtils/HHZUtils-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+			};
+			name = Release;
+		};
+		34FE9531DA9AF2820790339988D5FF41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7D28126197D5263838EA7991ECF246A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45E8AE14BBF6A89597FA6BC83BDE3879 /* HHZBaseClass.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/HHZBaseClass/HHZBaseClass-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+			};
+			name = Debug;
+		};
+		857F829028D289A81186041CFB905525 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4886948CA613C794B293115F1DE9C9EC /* HHZCategory.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/HHZCategory/HHZCategory-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+			};
+			name = Debug;
+		};
+		9AFB23A7D582B3C30FFD2DD13058E439 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F351D937CA8499D93DEE39557EF159A8 /* Pods-HHZPopupView.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		C6EB71E67F8A7EB4CBF66FEA855341BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4886948CA613C794B293115F1DE9C9EC /* HHZCategory.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/HHZCategory/HHZCategory-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+			};
+			name = Release;
+		};
+		EAD2B39D644B6058D2C6C8EEDAF18740 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A7CE1C7460DB2379D60DE96BF966B3B /* Pods-HHZPopupView.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		17719EA82343B42978535C43DA6DEFBC /* Build configuration list for PBXNativeTarget "HHZBaseClass" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D28126197D5263838EA7991ECF246A8 /* Debug */,
+				06561D502CF8541DEC6FBBA072CD6FD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C7D17A37D091C98D2F0DD886C3A9320 /* Debug */,
+				34FE9531DA9AF2820790339988D5FF41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4920DC161ED3D0180FC4C3081654EC6A /* Build configuration list for PBXNativeTarget "Pods-HHZPopupView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAD2B39D644B6058D2C6C8EEDAF18740 /* Debug */,
+				9AFB23A7D582B3C30FFD2DD13058E439 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7346B20AD17917CC8648768071F76FEE /* Build configuration list for PBXNativeTarget "HHZUtils" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AA14B86FAF70E79CC2E03B2B9DE6EFE /* Debug */,
+				34EF34924A911C1D3DFFFF2E82024FBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		947098854439389F3288993864DBBBD1 /* Build configuration list for PBXNativeTarget "HHZCategory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				857F829028D289A81186041CFB905525 /* Debug */,
+				C6EB71E67F8A7EB4CBF66FEA855341BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
