@@ -7,11 +7,17 @@
 //
 
 #import "HHZPopupOptionsView.h"
+#import "HHZPopupOptionView.h"
 #import <HHZUtils/HHZKitTool.h>
-#import <HHZBaseClass/HHZLabel.h>
 #import <HHZCategory/UIView+HHZCategory.h>
+#import "HHZOptionsViewTopShape.h"
+
+static CGFloat shapeWidth = 15.0f;
 
 @interface HHZPopupOptionsView ()
+//阴影背景
+@property (nonatomic, strong) UIView * shadowView;
+//Buttons的父视图
 @property (nonatomic, strong) UIView * bgView;
 //显示的动画时间
 @property (nonatomic, assign) CGFloat appearDur;
@@ -39,6 +45,7 @@
 
 @implementation HHZPopupOptionsView
 
+#pragma mark 配置基本信息
 - (instancetype)init
 {
     self = [super init];
@@ -47,13 +54,19 @@
         self.frame = window.bounds;
         [window addSubview:self];
         
+        self.shadowView = [[UIView alloc] init];
+        self.shadowView.frame = self.bounds;
+        self.shadowView.backgroundColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.3f];
+        [self addSubview:self.shadowView];
+        
         self.bgView = [[UIView alloc] init];
         self.bgView.backgroundColor = [UIColor whiteColor];
-        [self addSubview:self.bgView];
+        [self.shadowView addSubview:self.bgView];
         
         UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapSelfHidden)];
         [self addGestureRecognizer:tap];
         
+        //设置基本参数信息
         _appearDur = 0.5f;
         _disappearDur = 0.5f;
         _itemHeight = 40.0f;
@@ -77,28 +90,43 @@
     _bgSelectedColor = selectedColor;
 }
 
--(void)configTitleColor:(UIColor *)titleColor
+-(void)configTitleColor:(UIColor *)titleColor titleFont:(UIFont *)titleFont
 {
-    _titleColor = titleColor;
+    if (titleColor) _titleColor = titleColor;
+    if (titleFont) _titleFont = titleFont;
 }
 
--(void)configTitleFont:(UIFont *)titleFont
+-(void)configAppearDuring:(CGFloat)appearDuring disappearDuring:(CGFloat)disappearDuring
 {
-    _titleFont = titleFont;
+    if (appearDuring > 0) _appearDur = appearDuring;
+    if (disappearDuring > 0) _disappearDur = disappearDuring;
 }
 
--(void)showPopupOptionsViewTitle:(NSArray *)titleArray imageArray:(NSArray *)imageArray
+#pragma mark 对外调用时间
+-(void)showPopupOptionsViewTitle:(NSArray *)titleArray imageArray:(NSArray *)imageArray point:(CGPoint)point
 {
-    [self showPopupOptionsViewTitle:titleArray imageArray:imageArray appearDuring:_appearDur disappearDuring:_disappearDur];
+    [self showPopupOptionsViewTitle:titleArray imageArray:imageArray appearDuring:_appearDur disappearDuring:_disappearDur point:point];
 }
 
--(void)showPopupOptionsViewTitle:(NSArray *)titleArray imageArray:(NSArray *)imageArray appearDuring:(CGFloat)appearDuring disappearDuring:(CGFloat)disappearDuring
+-(void)showPopupOptionsViewTitle:(NSArray *)titleArray imageArray:(NSArray *)imageArray appearDuring:(CGFloat)appearDuring disappearDuring:(CGFloat)disappearDuring point:(CGPoint)point
 {
     [self configAppearDuring:appearDuring disappearDuring:disappearDuring];
-    [self createbgViewTitleArray:titleArray imageArray:imageArray];
+    [self createbgViewTitleArray:titleArray imageArray:imageArray point:point shapeLocation:HHZPopupOptionsViewTopShapeLocationRight];
 }
 
--(void)createbgViewTitleArray:(NSArray *)titleArray imageArray:(NSArray *)imageArray
+-(void)showPopupOptionsViewTitle:(NSArray *)titleArray imageArray:(NSArray *)imageArray shapeLocation:(HHZPopupOptionsViewTopShapeLocation)shapeLocation point:(CGPoint)point
+{
+    [self showPopupOptionsViewTitle:titleArray imageArray:imageArray appearDuring:_appearDur disappearDuring:_disappearDur shapeLocation:shapeLocation point:point];
+}
+
+-(void)showPopupOptionsViewTitle:(NSArray *)titleArray imageArray:(NSArray *)imageArray appearDuring:(CGFloat)appearDuring disappearDuring:(CGFloat)disappearDuring shapeLocation:(HHZPopupOptionsViewTopShapeLocation)shapeLocation point:(CGPoint)point
+{
+    [self configAppearDuring:appearDuring disappearDuring:disappearDuring];
+    [self createbgViewTitleArray:titleArray imageArray:imageArray point:point shapeLocation:shapeLocation];
+}
+
+#pragma mark 创建视图
+-(void)createbgViewTitleArray:(NSArray *)titleArray imageArray:(NSArray *)imageArray point:(CGPoint)point shapeLocation:(HHZPopupOptionsViewTopShapeLocation)shapeLocation
 {
     if (!titleArray || titleArray.count == 0) return;
     
@@ -110,7 +138,7 @@
     
     BOOL isImageExist = (imageArray && imageArray.count != 0 && imageArray.count == titleArray.count);
     
-    //获取最大宽度
+    //获取图片最大宽高度
     if (isImageExist) maxImageWidth = [self calculateMaxImageWidth:imageArray];
     if (isImageExist) maxImageHeight = [self calculateMaxImageHeight:imageArray];
     
@@ -158,7 +186,88 @@
         }
     }
     
-    self.bgView.frame = CGRectMake(100, 100, bgViewWidth, _itemHeight * titleArray.count);
+    //最后再根据文本和图片实际最大宽高值设置frame
+    self.bgView.frame = CGRectMake(0, 0, bgViewWidth, maxItemHeight * titleArray.count);
+    //添加三角形,如果是自动模式的话，需要特殊处理
+    if (shapeLocation == HHZPopupOptionsViewTopShapeLocationAutomatic)
+    {
+        [self handlePointAutomatic:point];
+    }
+    else
+    {
+        [self addShape:shapeLocation point:point];
+    }
+    
+    self.bgView.layer.cornerRadius = 6.0f;
+    self.bgView.layer.masksToBounds = YES;
+}
+
+-(void)addShape:(HHZPopupOptionsViewTopShapeLocation)shapeLocation point:(CGPoint)point
+{
+    HHZOptionsViewTopShape * shape = [[HHZOptionsViewTopShape alloc] init];
+    [self.shadowView addSubview:shape];
+    
+    //shapeWidth 和 图形到bgVie左右间隙一样
+    switch (shapeLocation) {
+        case HHZPopupOptionsViewTopShapeLocationLeft:
+        {
+            shape.frame = CGRectMake(point.x - shapeWidth/2.0f, point.y, shapeWidth, shapeWidth);
+            self.bgView.frame = CGRectMake(shape.x - shapeWidth, shape.y + shapeWidth, self.bgView.width, self.bgView.height);
+        }
+            break;
+        case HHZPopupOptionsViewTopShapeLocationCenter:
+        {
+            shape.frame = CGRectMake(point.x - shapeWidth/2.0f, point.y, shapeWidth, shapeWidth);
+            self.bgView.frame = CGRectMake(shape.x - self.bgView.width/2.0f, shape.y + shapeWidth, self.bgView.width, self.bgView.height);
+            
+        }
+            break;
+        case HHZPopupOptionsViewTopShapeLocationRight:
+        {
+            shape.frame = CGRectMake(point.x - shapeWidth/2.0f, point.y, shapeWidth, shapeWidth);
+            self.bgView.frame = CGRectMake(shape.x + 2 * shapeWidth - self.bgView.width, shape.y + shapeWidth, self.bgView.width, self.bgView.height);
+        }
+            break;
+        default:
+            break;
+    }
+}
+
+-(void)handlePointAutomatic:(CGPoint)point
+{
+    HHZOptionsViewTopShape * shape = [[HHZOptionsViewTopShape alloc] init];
+    shape.shapeDirection = HHZOptionsViewTopShapeDirectionTop;
+    //粗略将就一下，还有很多临界条件未考虑
+    if (point.x <= self.bgView.width)
+    {
+        shape.shapeDirection = HHZOptionsViewTopShapeDirectionLeft;
+        if (point.y >= (self.shadowView.height - self.bgView.height))
+        {
+            shape.frame = CGRectMake(point.x, point.y - shapeWidth/2.0f, shapeWidth, shapeWidth);
+            self.bgView.frame = CGRectMake(shape.x + shapeWidth, shape.yPlushHeight + shapeWidth - self.bgView.height, self.bgView.width, self.bgView.height);
+        }
+        else
+        {
+            shape.frame = CGRectMake(point.x, point.y - shapeWidth/2.0f, shapeWidth, shapeWidth);
+            self.bgView.frame = CGRectMake(shape.x + shapeWidth, shape.y - shapeWidth, self.bgView.width, self.bgView.height);
+        }
+    }
+    else
+    {
+        if (self.shadowView.height - point.y >= self.bgView.height)
+        {
+            shape.shapeDirection = HHZOptionsViewTopShapeDirectionTop;
+            shape.frame = CGRectMake(point.x - shapeWidth/2.0f, point.y, shapeWidth, shapeWidth);
+            self.bgView.frame = CGRectMake(shape.xPlusWidth + shapeWidth - self.bgView.width, shape.yPlushHeight, self.bgView.width, self.bgView.height);
+        }
+        else
+        {
+            shape.shapeDirection = HHZOptionsViewTopShapeDirectionBottom;
+            shape.frame = CGRectMake(point.x - shapeWidth/2.0f, point.y - shapeWidth, shapeWidth, shapeWidth);
+            self.bgView.frame = CGRectMake(shape.xPlusWidth + shapeWidth - self.bgView.width, shape.y - self.bgView.height, self.bgView.width, self.bgView.height);
+        }
+    }
+    [self.shadowView addSubview:shape];
 }
 
 #pragma mark 计算最大宽高度
@@ -184,195 +293,12 @@
     return maxHeight;
 }
 
-#pragma mark 配置一些基本信息
--(void)configAppearDuring:(CGFloat)appearDuring disappearDuring:(CGFloat)disappearDuring
-{
-    if (appearDuring > 0) _appearDur = appearDuring;
-    if (disappearDuring > 0) _disappearDur = disappearDuring;
-}
-
 #pragma mark 事件触发
 -(void)tapSelfHidden
 {
-//    [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
-//    [self removeFromSuperview];
+    [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    [self removeFromSuperview];
 }
 
 @end
 
-@interface HHZPopupOptionView ()
-@property (nonatomic, strong) HHZLabel * titleLabel;
-@property (nonatomic, strong) UIImageView * imgView;
-//左边的间隙
-@property (nonatomic, assign) CGFloat leftSpace;
-//右边的间隙
-@property (nonatomic, assign) CGFloat rightSpace;
-//图片和文字同时存在时候的间隙
-@property (nonatomic, assign) CGFloat betweenSpace;
-//如果有图片,选出最大尺寸
-@property (nonatomic, assign) CGFloat maxImageWidth;
-//正常背景颜色
-@property (nonatomic, strong) UIColor * normalBGColor;
-//选中的背景颜色
-@property (nonatomic, strong) UIColor * selectedBGColor;
-//底部横线
-@property (nonatomic, strong) UIView * bottomView;
-@end
-
-@implementation HHZPopupOptionView
-
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        _normalBGColor = [UIColor whiteColor];
-        self.backgroundColor = _normalBGColor;
-        
-        _bottomView = [[UIView alloc] init];
-        _bottomView.backgroundColor = [UIColor lightGrayColor];
-        [self addSubview:_bottomView];
-    }
-    return self;
-}
-
--(void)setFrame:(CGRect)frame
-{
-    [super setFrame:frame];
-    if (frame.size.width > 0)
-    {
-        self.imgView.frame = CGRectMake(self.imgView.x, (frame.size.height - self.imgView.height)/2, self.imgView.width, self.imgView.height);
-        self.titleLabel.frame = CGRectMake(self.titleLabel.x, (frame.size.height - self.titleLabel.height)/2, self.titleLabel.width, self.titleLabel.height);
-        _bottomView.frame = CGRectMake(0, frame.size.height - 0.5, frame.size.width, 0.5);
-    }
-}
-
--(void)configBGNormalColor:(UIColor *)normalColor selectedColor:(UIColor *)selectedColor
-{
-    if (normalColor)
-    {
-        _normalBGColor = normalColor;
-        self.backgroundColor = _normalBGColor;
-    }
-    
-    if (selectedColor)
-    {
-        _selectedBGColor = selectedColor;
-        _bottomView.backgroundColor = selectedColor;
-    }
-    else
-    {
-        _selectedBGColor = _normalBGColor;
-    }
-    
-}
-
--(void)configLeftSpace:(CGFloat)leftSpace rightSpace:(CGFloat)rightSpace betweenSpace:(CGFloat)betweenSpace maxImageWidth:(CGFloat)maxImageWidth
-{
-    _leftSpace = leftSpace;
-    _rightSpace = rightSpace;
-    _betweenSpace = betweenSpace;
-    _maxImageWidth = maxImageWidth;
-}
-
--(void)configTitle:(NSString *)title image:(UIImage *)image titleColor:(UIColor *)titleColor font:(UIFont *)font
-{
-    if (font) self.titleLabel.font = font;
-    if (titleColor) self.titleLabel.textColor = titleColor;
-    
-    //计算图片Frame
-    if (image)
-    {
-        CGFloat imgWidth = image.size.width/[UIScreen mainScreen].scale;
-        CGFloat imgHeight = image.size.height/[UIScreen mainScreen].scale;
-        self.imgView.image = image;
-        self.imgView.frame = CGRectMake(_leftSpace, (self.height - imgHeight)/2, imgWidth, imgHeight);
-    }
-    
-    //计算文本的Frame
-    self.titleLabel.text = title;
-    if (image)
-    {
-        self.titleLabel.frame = CGRectMake(_leftSpace + _maxImageWidth + _betweenSpace, (self.height - self.titleLabel.height)/2, self.titleLabel.width, self.titleLabel.height);
-    }
-    else
-    {
-        self.titleLabel.frame = CGRectMake(_leftSpace, (self.height - self.titleLabel.height)/2, self.titleLabel.width, self.titleLabel.height);
-    }
-}
-
-
--(CGFloat)getOptionLabelWidth
-{
-    return _titleLabel.width;
-}
-
--(CGFloat)getOptionLabelHeight
-{
-    return _titleLabel.height;
-}
-
-
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
-    [super touchesBegan:touches withEvent:event];
-    self.backgroundColor = _selectedBGColor;
-}
-
--(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
-    [super touchesEnded:touches withEvent:event];
-    self.backgroundColor = _normalBGColor;
-    
-    if ([self judgeTouchEnd:[touches anyObject]])
-    {
-        
-    }
-    
-}
-
--(void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
-    [super touchesCancelled:touches withEvent:event];
-    self.backgroundColor = _normalBGColor;
-    
-    if ([self judgeTouchEnd:[touches anyObject]])
-    {
-        
-    }
-}
-
-
--(BOOL)judgeTouchEnd:(UITouch *)touch
-{
-    CGPoint point = [touch locationInView:self];
-    if (CGRectContainsPoint(self.bounds, point)) return YES;
-    
-    return NO;
-}
-
-
--(UILabel *)titleLabel
-{
-    if (!_titleLabel)
-    {
-        _titleLabel = [[HHZLabel alloc] init];
-        _titleLabel.font = [UIFont systemFontOfSize:18.0f];
-        _titleLabel.textColor = [UIColor whiteColor];
-        [self addSubview:_titleLabel];
-    }
-    return _titleLabel;
-}
-
--(UIImageView *)imgView
-{
-    if (!_imgView)
-    {
-        _imgView = [[UIImageView alloc] init];
-        _imgView.frame = CGRectZero;
-        [self addSubview:_imgView];
-    }
-    return _imgView;
-}
-
-
-@end

@@ -14,6 +14,8 @@
 		6E5812461F2DC4B2002EA975 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E5812451F2DC4B2002EA975 /* Assets.xcassets */; };
 		6E5812491F2DC4B2002EA975 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E5812471F2DC4B2002EA975 /* LaunchScreen.storyboard */; };
 		6E58125A1F2DC73B002EA975 /* HHZPopupOptionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5812591F2DC73B002EA975 /* HHZPopupOptionsView.m */; };
+		744BC86A1F2F0987002B87C8 /* HHZPopupOptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 744BC8691F2F0987002B87C8 /* HHZPopupOptionView.m */; };
+		744BC86D1F2F12F4002B87C8 /* HHZOptionsViewTopShape.m in Sources */ = {isa = PBXBuildFile; fileRef = 744BC86C1F2F12F4002B87C8 /* HHZOptionsViewTopShape.m */; };
 		E5D6A0EF9B2D25896240ACB7 /* libPods-HHZPopupView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22790B9F5CC65D890723BC1F /* libPods-HHZPopupView.a */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +34,10 @@
 		6E58124A1F2DC4B2002EA975 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E5812581F2DC73B002EA975 /* HHZPopupOptionsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHZPopupOptionsView.h; sourceTree = "<group>"; };
 		6E5812591F2DC73B002EA975 /* HHZPopupOptionsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHZPopupOptionsView.m; sourceTree = "<group>"; };
+		744BC8681F2F0987002B87C8 /* HHZPopupOptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHZPopupOptionView.h; sourceTree = "<group>"; };
+		744BC8691F2F0987002B87C8 /* HHZPopupOptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHZPopupOptionView.m; sourceTree = "<group>"; };
+		744BC86B1F2F12F4002B87C8 /* HHZOptionsViewTopShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHZOptionsViewTopShape.h; sourceTree = "<group>"; };
+		744BC86C1F2F12F4002B87C8 /* HHZOptionsViewTopShape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHZOptionsViewTopShape.m; sourceTree = "<group>"; };
 		F3E47A39542AD7853ECDE454 /* Pods-HHZPopupView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHZPopupView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HHZPopupView/Pods-HHZPopupView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,6 +101,10 @@
 			children = (
 				6E5812581F2DC73B002EA975 /* HHZPopupOptionsView.h */,
 				6E5812591F2DC73B002EA975 /* HHZPopupOptionsView.m */,
+				744BC8681F2F0987002B87C8 /* HHZPopupOptionView.h */,
+				744BC8691F2F0987002B87C8 /* HHZPopupOptionView.m */,
+				744BC86B1F2F12F4002B87C8 /* HHZOptionsViewTopShape.h */,
+				744BC86C1F2F12F4002B87C8 /* HHZOptionsViewTopShape.m */,
 			);
 			path = popupOptions;
 			sourceTree = "<group>";
@@ -241,10 +251,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				744BC86D1F2F12F4002B87C8 /* HHZOptionsViewTopShape.m in Sources */,
 				6E5812411F2DC4B2002EA975 /* ViewController.m in Sources */,
 				6E58125A1F2DC73B002EA975 /* HHZPopupOptionsView.m in Sources */,
 				6E58123E1F2DC4B2002EA975 /* AppDelegate.m in Sources */,
 				6E58123B1F2DC4B2002EA975 /* main.m in Sources */,
+				744BC86A1F2F0987002B87C8 /* HHZPopupOptionView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
