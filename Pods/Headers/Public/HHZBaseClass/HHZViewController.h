@@ -1,1 +1,1 @@
-../../../HHZBaseClass/HHZBaseClass/vc/HHZViewController.h
+../../../HHZBaseClass/HHZBaseClass/classes/vc/HHZViewController.h

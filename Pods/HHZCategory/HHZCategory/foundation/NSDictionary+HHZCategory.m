@@ -53,10 +53,15 @@
 -(void)setObject_hhz:(id)aObject Key:(id<NSCopying>)aKey
 {
     if (!aKey) return;
-    //nil时塞入Null对象
-    if (!aObject) [self setObject:[NSNull null] forKey:aKey];
     
-    [self setObject:aObject forKey:aKey];
+    if (aObject)
+    {
+        [self setObject:aObject forKey:aKey];
+    }
+    else
+    {
+        if (!aObject) [self setObject:[NSNull null] forKey:aKey];
+    }
 }
 
 

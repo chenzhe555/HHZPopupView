@@ -1,6 +1,6 @@
 {
   "name": "HHZBaseClass",
-  "version": "0.0.1.5",
+  "version": "0.0.1.7",
   "summary": "基类",
   "description": "陈哲是个好孩子-基类",
   "homepage": "https://github.com/chenzhe555/HHZBaseClass",
@@ -16,7 +16,7 @@
   },
   "source": {
     "git": "https://github.com/chenzhe555/HHZBaseClass.git",
-    "tag": "0.0.1.5"
+    "tag": "0.0.1.7"
   },
   "subspecs": [
     {
@@ -24,23 +24,23 @@
       "subspecs": [
         {
           "name": "kit",
-          "source_files": "HHZBaseClass/kit/*.{h,m}"
+          "source_files": "HHZBaseClass/classes/kit/*.{h,m}"
         },
         {
           "name": "navi",
-          "source_files": "HHZBaseClass/navi/*.{h,m}"
+          "source_files": "HHZBaseClass/classes/navi/*.{h,m}"
         },
         {
           "name": "tableview",
-          "source_files": "HHZBaseClass/tableview/*.{h,m}"
+          "source_files": "HHZBaseClass/classes/tableview/*.{h,m}"
         },
         {
           "name": "vc",
-          "source_files": "HHZBaseClass/vc/*.{h,m}"
+          "source_files": "HHZBaseClass/classes/vc/*.{h,m}"
         },
         {
           "name": "others",
-          "source_files": "HHZBaseClass/others/*.{h,m}"
+          "source_files": "HHZBaseClass/classes/others/*.{h,m}"
         }
       ]
     }

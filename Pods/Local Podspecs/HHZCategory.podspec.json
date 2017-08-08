@@ -1,6 +1,6 @@
 {
   "name": "HHZCategory",
-  "version": "0.0.2.3",
+  "version": "0.0.2.4",
   "summary": "分类",
   "description": "陈哲是个好孩子-分类",
   "homepage": "https://github.com/chenzhe555/HHZCategory",
@@ -16,7 +16,7 @@
   },
   "source": {
     "git": "https://github.com/chenzhe555/HHZCategory.git",
-    "tag": "0.0.2.3"
+    "tag": "0.0.2.4"
   },
   "public_header_files": "HHZCategory/HHZCategory.h",
   "source_files": "HHZCategory/HHZCategory.h",

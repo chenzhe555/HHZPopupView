@@ -20,9 +20,8 @@
     
     NSMutableDictionary * dic = [NSMutableDictionary dictionaryWithCapacity:3];
     [dic setObject:name forKey:@"name"];
-#pragma mark 无内存泄露
-    if (!object) [dic setObject:object forKey:@"object"];
-    if (!userInfo) [dic setObject:userInfo forKey:@"userInfo"];
+    if (object) [dic setObject:object forKey:@"object"];
+    if (userInfo) [dic setObject:userInfo forKey:@"userInfo"];
     
     //在主线程执行通知
     [self performSelectorOnMainThread:@selector(postDefineParameterOnMainThread:) withObject:dic waitUntilDone:wait];

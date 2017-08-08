@@ -24,6 +24,7 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
+    [super viewDidAppear:animated];
     HHZPopupOptionsView * popView = [[HHZPopupOptionsView alloc] init];
     [popView configSelectedBackgroundColor:[UIColor lightGrayColor]];
 //    [popView configBGViewBackgorundColor:[UIColor colorWithRed:0/255.0 green:142/255.0 blue:242/255.0 alpha:1]];

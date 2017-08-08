@@ -1,1 +1,1 @@
-../../../HHZBaseClass/HHZBaseClass/tableview/HHZTableViewCell.h
+../../../HHZBaseClass/HHZBaseClass/classes/tableview/HHZTableViewCell.h

@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (UIImage *)blurImageAtFrame:(CGRect)frame;
 
 // 灰度效果
-- (UIImage *)grayScale;
+- (UIImage * _Nullable)grayScale;
 
 // 固定宽度与固定高度
 - (UIImage *)scaleWithFixedWidth:(CGFloat)width;
@@ -98,7 +98,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @return
  */
--(UIImage *)imageWithCornerRadius_hhz:(CGFloat)radius Size:(CGSize)size;
+-(UIImage * _Nullable)imageWithCornerRadius_hhz:(CGFloat)radius Size:(CGSize)size;
 
 @end
 

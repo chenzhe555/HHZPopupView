@@ -1,1 +1,1 @@
-../../../HHZBaseClass/HHZBaseClass/others/HHZWeakProxy.h
+../../../HHZBaseClass/HHZBaseClass/classes/others/HHZWeakProxy.h

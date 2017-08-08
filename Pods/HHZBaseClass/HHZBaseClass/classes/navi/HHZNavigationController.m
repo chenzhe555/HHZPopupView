@@ -40,15 +40,12 @@
     }
     if (fontSize > 0.0f)
     {
-        if (isBold)
-        {
-            //设置文字加粗和大小
-            if (isBold) {
-                textAttrs[NSFontAttributeName] = [UIFont boldSystemFontOfSize:fontSize];
-            }
-            else {
-                textAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:fontSize];
-            }
+        //设置文字加粗和大小
+        if (isBold) {
+            textAttrs[NSFontAttributeName] = [UIFont boldSystemFontOfSize:fontSize];
+        }
+        else {
+            textAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:fontSize];
         }
     }
     

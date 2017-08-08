@@ -1,1 +1,1 @@
-../../../HHZBaseClass/HHZBaseClass/navi/HHZNavigationController.h
+../../../HHZBaseClass/HHZBaseClass/classes/navi/HHZNavigationController.h

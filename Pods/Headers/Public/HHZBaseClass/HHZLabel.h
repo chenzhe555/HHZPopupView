@@ -1,1 +1,1 @@
-../../../HHZBaseClass/HHZBaseClass/kit/HHZLabel.h
+../../../HHZBaseClass/HHZBaseClass/classes/kit/HHZLabel.h

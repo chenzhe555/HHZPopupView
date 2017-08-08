@@ -127,27 +127,30 @@
             continue;
         }
         
-        NSRange range = NSMakeRange(2, [propertyType length]-3);
-        if ([propertyType isEqualToString:@"B"])
-        {
-            propertyType = @"BOOL";
-        }
-        else if ([propertyType isEqualToString:@"d"])
-        {
-            propertyType = @"CGFloat";
-        }
-        else if ([propertyType isEqualToString:@"q"])
-        {
-            propertyType = @"NSInteger";
-        }
-        else if ([propertyType isEqualToString:@"Q"])
-        {
-            propertyType = @"NSUInteger";
-        }
-        else
-        {
-            propertyType = [propertyType substringWithRange:range];
-        }
+        //object和属性类型相同直接赋值，由于后面没有进行检测，暂时先注释掉.
+//        NSRange range = NSMakeRange(2, [propertyType length]-3);
+//        if ([propertyType isEqualToString:@"B"])
+//        {
+//            propertyType = @"BOOL";
+//        }
+//        else if ([propertyType isEqualToString:@"d"])
+//        {
+//            propertyType = @"CGFloat";
+//        }
+//        else if ([propertyType isEqualToString:@"q"])
+//        {
+//            propertyType = @"NSInteger";
+//        }
+//        else if ([propertyType isEqualToString:@"Q"])
+//        {
+//            propertyType = @"NSUInteger";
+//        }
+//        else
+//        {
+//            propertyType = [propertyType substringWithRange:range];
+//        }
+        
+        
         
         id object = [dict objectForKey:propertyName];
         
@@ -294,7 +297,8 @@
 
 -(id)initWithBlock:(void (^)(__weak id, id, id, void *))block
 {
-    if (self == [super init])
+    self = [super init];
+    if (!self)
     {
         self.block = block;
     }

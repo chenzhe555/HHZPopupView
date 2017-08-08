@@ -1,1 +1,1 @@
-../../../HHZBaseClass/HHZBaseClass/vc/HHZWebViewController.h
+../../../HHZBaseClass/HHZBaseClass/classes/vc/HHZWebViewController.h
