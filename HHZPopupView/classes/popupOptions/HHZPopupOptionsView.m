@@ -130,6 +130,8 @@ static CGFloat shapeWidth = 15.0f;
 //    //最后再根据文本和图片实际最大宽高值设置frame
 //    self.bgView.frame = CGRectMake(0, 0, bgViewWidth, maxItemHeight * titleArray.count);
     
+    
+    self.bgView.frame = CGRectMake(0, 0, bgViewWidth, _itemHeight * titleArray.count);
     //添加三角形,如果是自动模式的话，需要特殊处理
     if (shapeLocation == HHZPopupOptionsViewTopShapeLocationAutomatic)
     {
