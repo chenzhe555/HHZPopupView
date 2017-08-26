@@ -105,29 +105,31 @@ static CGFloat shapeWidth = 15.0f;
         maxTitleHeight = MAX(maxTitleHeight, [optionView getOptionLabelHeight]);
     }
     
-    //赋值整体宽度
-    CGFloat maxItemHeight = _topSpace * 2 + MAX(maxTitleHeight,maxImageHeight);
-    NSInteger index = 0;
-    for (UIView * vie in self.bgView.subviews)
-    {
-        if ([vie isKindOfClass:[HHZPopupOptionView class]])
-        {
-            index = ((HHZPopupOptionView *)vie).itemIndex;
-            if (isImageExist)
-            {
-                vie.frame = CGRectMake(vie.x, index * maxItemHeight, _leftSpace + _rightSpace + _betweenSpace + maxTitleWidth + maxImageWidth, maxItemHeight);
-            }
-            else
-            {
-                vie.frame = CGRectMake(vie.x, index * maxItemHeight, _leftSpace + _rightSpace + maxTitleWidth, maxItemHeight);
-            }
-            
-            if (bgViewWidth == 0.0) bgViewWidth = vie.width;
-        }
-    }
+#pragma mark 这里是想根据实际图片和文字的最大高度，赋值Item高度，现在改为外面设置高度
+//    //赋值整体宽度
+//    CGFloat maxItemHeight = _topSpace * 2 + MAX(maxTitleHeight,maxImageHeight);
+//    NSInteger index = 0;
+//    for (UIView * vie in self.bgView.subviews)
+//    {
+//        if ([vie isKindOfClass:[HHZPopupOptionView class]])
+//        {
+//            index = ((HHZPopupOptionView *)vie).itemIndex;
+//            if (isImageExist)
+//            {
+//                vie.frame = CGRectMake(vie.x, index * maxItemHeight, _leftSpace + _rightSpace + _betweenSpace + maxTitleWidth + maxImageWidth, maxItemHeight);
+//            }
+//            else
+//            {
+//                vie.frame = CGRectMake(vie.x, index * maxItemHeight, _leftSpace + _rightSpace + maxTitleWidth, maxItemHeight);
+//            }
+//            
+//            if (bgViewWidth == 0.0) bgViewWidth = vie.width;
+//        }
+//    }
+//    
+//    //最后再根据文本和图片实际最大宽高值设置frame
+//    self.bgView.frame = CGRectMake(0, 0, bgViewWidth, maxItemHeight * titleArray.count);
     
-    //最后再根据文本和图片实际最大宽高值设置frame
-    self.bgView.frame = CGRectMake(0, 0, bgViewWidth, maxItemHeight * titleArray.count);
     //添加三角形,如果是自动模式的话，需要特殊处理
     if (shapeLocation == HHZPopupOptionsViewTopShapeLocationAutomatic)
     {
@@ -138,7 +140,7 @@ static CGFloat shapeWidth = 15.0f;
         [self addShape:shapeLocation point:point];
     }
     
-    self.bgView.layer.cornerRadius = 6.0f;
+    self.bgView.layer.cornerRadius = 5.0f;
     self.bgView.layer.masksToBounds = YES;
 }
 
