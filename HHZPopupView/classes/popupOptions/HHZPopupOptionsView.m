@@ -10,37 +10,11 @@
 #import "HHZPopupOptionView.h"
 #import <HHZUtils/HHZKitTool.h>
 #import <HHZCategory/UIView+HHZCategory.h>
-#import "HHZOptionsViewTopShape.h"
 
 static CGFloat shapeWidth = 15.0f;
 
 @interface HHZPopupOptionsView ()
-//阴影背景
-@property (nonatomic, strong) UIView * shadowView;
-//Buttons的父视图
-@property (nonatomic, strong) UIView * bgView;
-//显示的动画时间
-@property (nonatomic, assign) CGFloat appearDur;
-//消失的动画时间
-@property (nonatomic, assign) CGFloat disappearDur;
-//每个Item的高度
-@property (nonatomic, assign) CGFloat itemHeight;
-//每个Item的宽度
-@property (nonatomic, assign) CGFloat itemWidth;
-//左边的间隙
-@property (nonatomic, assign) CGFloat leftSpace;
-//右边的间隙
-@property (nonatomic, assign) CGFloat rightSpace;
-//图片和文字同时存在时候的间隙
-@property (nonatomic, assign) CGFloat betweenSpace;
-//上下的间隙
-@property (nonatomic, assign) CGFloat topSpace;
-//文字颜色
-@property (nonatomic, strong) UIColor * titleColor;
-//文字字体
-@property (nonatomic, strong) UIFont * titleFont;
-//Item选中颜色
-@property (nonatomic, strong) UIColor * bgSelectedColor;
+
 @end
 
 @implementation HHZPopupOptionsView
@@ -80,48 +54,14 @@ static CGFloat shapeWidth = 15.0f;
     return self;
 }
 
--(void)configBGViewBackgorundColor:(UIColor *)bgColor
-{
-    self.bgView.backgroundColor = bgColor;
-}
-
--(void)configSelectedBackgroundColor:(UIColor *)selectedColor
-{
-    _bgSelectedColor = selectedColor;
-}
-
--(void)configTitleColor:(UIColor *)titleColor titleFont:(UIFont *)titleFont
-{
-    if (titleColor) _titleColor = titleColor;
-    if (titleFont) _titleFont = titleFont;
-}
-
--(void)configAppearDuring:(CGFloat)appearDuring disappearDuring:(CGFloat)disappearDuring
-{
-    if (appearDuring > 0) _appearDur = appearDuring;
-    if (disappearDuring > 0) _disappearDur = disappearDuring;
-}
-
 #pragma mark 对外调用时间
 -(void)showPopupOptionsViewTitle:(NSArray *)titleArray imageArray:(NSArray *)imageArray point:(CGPoint)point
 {
-    [self showPopupOptionsViewTitle:titleArray imageArray:imageArray appearDuring:_appearDur disappearDuring:_disappearDur point:point];
-}
-
--(void)showPopupOptionsViewTitle:(NSArray *)titleArray imageArray:(NSArray *)imageArray appearDuring:(CGFloat)appearDuring disappearDuring:(CGFloat)disappearDuring point:(CGPoint)point
-{
-    [self configAppearDuring:appearDuring disappearDuring:disappearDuring];
     [self createbgViewTitleArray:titleArray imageArray:imageArray point:point shapeLocation:HHZPopupOptionsViewTopShapeLocationRight];
 }
 
 -(void)showPopupOptionsViewTitle:(NSArray *)titleArray imageArray:(NSArray *)imageArray shapeLocation:(HHZPopupOptionsViewTopShapeLocation)shapeLocation point:(CGPoint)point
 {
-    [self showPopupOptionsViewTitle:titleArray imageArray:imageArray appearDuring:_appearDur disappearDuring:_disappearDur shapeLocation:shapeLocation point:point];
-}
-
--(void)showPopupOptionsViewTitle:(NSArray *)titleArray imageArray:(NSArray *)imageArray appearDuring:(CGFloat)appearDuring disappearDuring:(CGFloat)disappearDuring shapeLocation:(HHZPopupOptionsViewTopShapeLocation)shapeLocation point:(CGPoint)point
-{
-    [self configAppearDuring:appearDuring disappearDuring:disappearDuring];
     [self createbgViewTitleArray:titleArray imageArray:imageArray point:point shapeLocation:shapeLocation];
 }
 
@@ -204,28 +144,25 @@ static CGFloat shapeWidth = 15.0f;
 
 -(void)addShape:(HHZPopupOptionsViewTopShapeLocation)shapeLocation point:(CGPoint)point
 {
-    HHZOptionsViewTopShape * shape = [[HHZOptionsViewTopShape alloc] init];
-    [self.shadowView addSubview:shape];
-    
     //shapeWidth 和 图形到bgVie左右间隙一样
     switch (shapeLocation) {
         case HHZPopupOptionsViewTopShapeLocationLeft:
         {
-            shape.frame = CGRectMake(point.x - shapeWidth/2.0f, point.y, shapeWidth, shapeWidth);
-            self.bgView.frame = CGRectMake(shape.x - shapeWidth, shape.y + shapeWidth, self.bgView.width, self.bgView.height);
+            self.topShape.frame = CGRectMake(point.x - shapeWidth/2.0f, point.y, shapeWidth, shapeWidth);
+            self.bgView.frame = CGRectMake(self.topShape.x - shapeWidth, self.topShape.y + shapeWidth, self.bgView.width, self.bgView.height);
         }
             break;
         case HHZPopupOptionsViewTopShapeLocationCenter:
         {
-            shape.frame = CGRectMake(point.x - shapeWidth/2.0f, point.y, shapeWidth, shapeWidth);
-            self.bgView.frame = CGRectMake(shape.x - self.bgView.width/2.0f, shape.y + shapeWidth, self.bgView.width, self.bgView.height);
+            self.topShape.frame = CGRectMake(point.x - shapeWidth/2.0f, point.y, shapeWidth, shapeWidth);
+            self.bgView.frame = CGRectMake(self.topShape.x - self.bgView.width/2.0f, self.topShape.y + shapeWidth, self.bgView.width, self.bgView.height);
             
         }
             break;
         case HHZPopupOptionsViewTopShapeLocationRight:
         {
-            shape.frame = CGRectMake(point.x - shapeWidth/2.0f, point.y, shapeWidth, shapeWidth);
-            self.bgView.frame = CGRectMake(shape.x + 2 * shapeWidth - self.bgView.width, shape.y + shapeWidth, self.bgView.width, self.bgView.height);
+            self.topShape.frame = CGRectMake(point.x - shapeWidth/2.0f, point.y, shapeWidth, shapeWidth);
+            self.bgView.frame = CGRectMake(self.topShape.x + 2 * shapeWidth - self.bgView.width, self.topShape.y + shapeWidth, self.bgView.width, self.bgView.height);
         }
             break;
         default:
@@ -235,39 +172,48 @@ static CGFloat shapeWidth = 15.0f;
 
 -(void)handlePointAutomatic:(CGPoint)point
 {
-    HHZOptionsViewTopShape * shape = [[HHZOptionsViewTopShape alloc] init];
-    shape.shapeDirection = HHZOptionsViewTopShapeDirectionTop;
+    self.topShape.shapeDirection = HHZOptionsViewTopShapeDirectionTop;
     //粗略将就一下，还有很多临界条件未考虑
     if (point.x <= self.bgView.width)
     {
-        shape.shapeDirection = HHZOptionsViewTopShapeDirectionLeft;
+        self.topShape.shapeDirection = HHZOptionsViewTopShapeDirectionLeft;
         if (point.y >= (self.shadowView.height - self.bgView.height))
         {
-            shape.frame = CGRectMake(point.x, point.y - shapeWidth/2.0f, shapeWidth, shapeWidth);
-            self.bgView.frame = CGRectMake(shape.x + shapeWidth, shape.yPlushHeight + shapeWidth - self.bgView.height, self.bgView.width, self.bgView.height);
+            self.topShape.frame = CGRectMake(point.x, point.y - shapeWidth/2.0f, shapeWidth, shapeWidth);
+            self.bgView.frame = CGRectMake(self.topShape.x + shapeWidth, self.topShape.yPlushHeight + shapeWidth - self.bgView.height, self.bgView.width, self.bgView.height);
         }
         else
         {
-            shape.frame = CGRectMake(point.x, point.y - shapeWidth/2.0f, shapeWidth, shapeWidth);
-            self.bgView.frame = CGRectMake(shape.x + shapeWidth, shape.y - shapeWidth, self.bgView.width, self.bgView.height);
+            self.topShape.frame = CGRectMake(point.x, point.y - shapeWidth/2.0f, shapeWidth, shapeWidth);
+            self.bgView.frame = CGRectMake(self.topShape.x + shapeWidth, self.topShape.y - shapeWidth, self.bgView.width, self.bgView.height);
         }
     }
     else
     {
         if (self.shadowView.height - point.y >= self.bgView.height)
         {
-            shape.shapeDirection = HHZOptionsViewTopShapeDirectionTop;
-            shape.frame = CGRectMake(point.x - shapeWidth/2.0f, point.y, shapeWidth, shapeWidth);
-            self.bgView.frame = CGRectMake(shape.xPlusWidth + shapeWidth - self.bgView.width, shape.yPlushHeight, self.bgView.width, self.bgView.height);
+            self.topShape.shapeDirection = HHZOptionsViewTopShapeDirectionTop;
+            self.topShape.frame = CGRectMake(point.x - shapeWidth/2.0f, point.y, shapeWidth, shapeWidth);
+            self.bgView.frame = CGRectMake(self.topShape.xPlusWidth + shapeWidth - self.bgView.width, self.topShape.yPlushHeight, self.bgView.width, self.bgView.height);
         }
         else
         {
-            shape.shapeDirection = HHZOptionsViewTopShapeDirectionBottom;
-            shape.frame = CGRectMake(point.x - shapeWidth/2.0f, point.y - shapeWidth, shapeWidth, shapeWidth);
-            self.bgView.frame = CGRectMake(shape.xPlusWidth + shapeWidth - self.bgView.width, shape.y - self.bgView.height, self.bgView.width, self.bgView.height);
+            self.topShape.shapeDirection = HHZOptionsViewTopShapeDirectionBottom;
+            self.topShape.frame = CGRectMake(point.x - shapeWidth/2.0f, point.y - shapeWidth, shapeWidth, shapeWidth);
+            self.bgView.frame = CGRectMake(self.topShape.xPlusWidth + shapeWidth - self.bgView.width, self.topShape.y - self.bgView.height, self.bgView.width, self.bgView.height);
         }
     }
-    [self.shadowView addSubview:shape];
+    [self.shadowView addSubview:self.topShape];
+}
+
+-(HHZOptionsViewTopShape *)topShape
+{
+    if (!_topShape)
+    {
+        _topShape = [[HHZOptionsViewTopShape alloc] init];
+        [self.shadowView addSubview:_topShape];
+    }
+    return _topShape;
 }
 
 #pragma mark 计算最大宽高度

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HHZOptionsViewTopShape.h"
 
 //目前只支持三角形
 typedef NS_ENUM(NSInteger,HHZPopupOptionsViewTopShapeLocation){
@@ -19,6 +20,35 @@ typedef NS_ENUM(NSInteger,HHZPopupOptionsViewTopShapeLocation){
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HHZPopupOptionsView : UIView
+//阴影背景
+@property (nonatomic, strong) UIView * shadowView;
+//Buttons的父视图
+@property (nonatomic, strong) UIView * bgView;
+//顶部形状
+@property (nonatomic, strong) HHZOptionsViewTopShape * topShape;
+//显示的动画时间
+@property (nonatomic, assign) CGFloat appearDur;
+//消失的动画时间
+@property (nonatomic, assign) CGFloat disappearDur;
+//每个Item的高度
+@property (nonatomic, assign) CGFloat itemHeight;
+//每个Item的宽度
+@property (nonatomic, assign) CGFloat itemWidth;
+//左边的间隙
+@property (nonatomic, assign) CGFloat leftSpace;
+//右边的间隙
+@property (nonatomic, assign) CGFloat rightSpace;
+//图片和文字同时存在时候的间隙
+@property (nonatomic, assign) CGFloat betweenSpace;
+//上下的间隙
+@property (nonatomic, assign) CGFloat topSpace;
+//文字颜色
+@property (nonatomic, strong) UIColor * titleColor;
+//文字字体
+@property (nonatomic, strong) UIFont * titleFont;
+//Item选中颜色
+@property (nonatomic, strong) UIColor * bgSelectedColor;
+
 #pragma mark Required
 /**
  *  显示Options选项框
@@ -35,40 +65,6 @@ NS_ASSUME_NONNULL_BEGIN
     rect 显示位置
  */
 -(void)showPopupOptionsViewTitle:(NSArray *)titleArray imageArray:(NSArray * _Nullable)imageArray shapeLocation:(HHZPopupOptionsViewTopShapeLocation)shapeLocation point:(CGPoint)point;
-
-
-#pragma mark Optional
-/**
- *  显示Options选项框
-    titleArray  文本数组，不为空
-    imageArray  图片数组，可以为空
-    appearDuring    显示动画时间
-    disappearDuring 消失动画时间
-    shapeLocation 顶部图形位置信息
-    rect 显示位置
- */
--(void)showPopupOptionsViewTitle:(NSArray *)titleArray imageArray:(NSArray * _Nullable)imageArray appearDuring:(CGFloat)appearDuring disappearDuring:(CGFloat)disappearDuring shapeLocation:(HHZPopupOptionsViewTopShapeLocation)shapeLocation point:(CGPoint)point;
-/**
- *  显示Options选项框
-    titleArray  文本数组，不为空
-    imageArray  图片数组，可以为空
-    appearDuring    显示动画时间
-    disappearDuring 消失动画时间
-    rect 显示位置
- */
--(void)showPopupOptionsViewTitle:(NSArray *)titleArray imageArray:(NSArray * _Nullable)imageArray appearDuring:(CGFloat)appearDuring disappearDuring:(CGFloat)disappearDuring point:(CGPoint)point;
-/**
- *  设置OptionsView的背景色
- */
--(void)configBGViewBackgorundColor:(UIColor *)bgColor;
-/**
- *  设置Item的选中颜色
- */
--(void)configSelectedBackgroundColor:(UIColor *)selectedColor;
-/**
- *  设置Item的文本颜色和字体
- */
--(void)configTitleColor:(UIColor * _Nullable)titleColor titleFont:(UIFont * _Nullable)titleFont;
 @end
 
 
