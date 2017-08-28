@@ -25,8 +25,14 @@
 @property (nonatomic, strong) UIColor * normalBGColor;
 //选中的背景颜色
 @property (nonatomic, strong) UIColor * selectedBGColor;
+//正常文字颜色
+@property (nonatomic, strong) UIColor * normalTitleColor;
+//选中的文字颜色
+@property (nonatomic, strong) UIColor * selectedTitleColor;
 //底部横线
 @property (nonatomic, strong) UIView * bottomView;
+//是否被按下，按下后有颜色变化效果
+@property (nonatomic, assign) BOOL isSelected;
 @end
 
 @implementation HHZPopupOptionView
@@ -35,12 +41,11 @@
 {
     self = [super init];
     if (self) {
-        _normalBGColor = [UIColor whiteColor];
-        self.backgroundColor = _normalBGColor;
-        
         _bottomView = [[UIView alloc] init];
         _bottomView.backgroundColor = [UIColor lightGrayColor];
         [self addSubview:_bottomView];
+        
+        _isSelected = NO;
     }
     return self;
 }
@@ -58,22 +63,13 @@
 
 -(void)configBGNormalColor:(UIColor *)normalColor selectedColor:(UIColor *)selectedColor
 {
-    if (normalColor)
-    {
-        _normalBGColor = normalColor;
-        self.backgroundColor = _normalBGColor;
-    }
+    if (!normalColor) return;
     
-    if (selectedColor)
-    {
-        _selectedBGColor = selectedColor;
-        _bottomView.backgroundColor = selectedColor;
-    }
-    else
-    {
-        _selectedBGColor = _normalBGColor;
-    }
+    self.backgroundColor = _normalBGColor;
+    _normalBGColor = normalColor;
+    _selectedBGColor = selectedColor ? selectedColor : _normalBGColor;
     
+    //暂时不加入文字也变色的情况，不然太多种可能性了
 }
 
 -(void)configLeftSpace:(CGFloat)leftSpace rightSpace:(CGFloat)rightSpace betweenSpace:(CGFloat)betweenSpace maxImageWidth:(CGFloat)maxImageWidth
@@ -126,42 +122,40 @@
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     [super touchesBegan:touches withEvent:event];
-    self.backgroundColor = _selectedBGColor;
+    [self changeSelectedColor:YES];
 }
 
 -(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     [super touchesEnded:touches withEvent:event];
-    self.backgroundColor = _normalBGColor;
-    
-    if ([self judgeTouchEnd:[touches anyObject]])
-    {
-        
-    }
-    
+    [self changeSelectedColor:NO];
 }
 
 -(void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     [super touchesCancelled:touches withEvent:event];
-    self.backgroundColor = _normalBGColor;
-    
-    if ([self judgeTouchEnd:[touches anyObject]])
+    [self changeSelectedColor:NO];
+}
+
+-(void)changeSelectedColor:(BOOL)isBegin
+{
+    if (isBegin)
     {
-        
+        if (!_isSelected)
+        {
+            self.backgroundColor = _selectedBGColor;
+            _isSelected = YES;
+        }
+    }
+    else
+    {
+        if (_isSelected)
+        {
+            self.backgroundColor = _normalBGColor;
+            _isSelected = NO;
+        }
     }
 }
-
--(BOOL)judgeTouchEnd:(UITouch *)touch
-{
-    CGPoint point = [touch locationInView:self];
-    if (CGRectContainsPoint(self.bounds, point)) return YES;
-    
-    return NO;
-}
-
-
-
 
 
 

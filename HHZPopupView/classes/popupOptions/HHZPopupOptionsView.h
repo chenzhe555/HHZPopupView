@@ -17,9 +17,19 @@ typedef NS_ENUM(NSInteger,HHZPopupOptionsViewTopShapeLocation){
     HHZPopupOptionsViewTopShapeLocationRight        //右
 };
 
+
+@protocol HHZPopupOptionViewsDelegate <NSObject>
+
+-(void)dlTapOptionAtIndex:(NSInteger)index;
+
+-(void)dlTapToHidden;
+
+@end
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HHZPopupOptionsView : UIView
+@property (nonatomic, assign) id<HHZPopupOptionViewsDelegate> delegate;
 //阴影背景
 @property (nonatomic, strong) UIView * shadowView;
 //Buttons的父视图

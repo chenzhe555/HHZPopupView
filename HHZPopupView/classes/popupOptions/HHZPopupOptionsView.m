@@ -24,9 +24,14 @@ static CGFloat shapeWidth = 15.0f;
 {
     self = [super init];
     if (self) {
-        UIWindow * window = [HHZKitTool getMainWindow];
+        
+        UIWindow * window = [UIApplication sharedApplication].keyWindow;
+        if (!window)
+        {
+            window = [[UIApplication sharedApplication].windows lastObject];
+        }
+        
         self.frame = window.bounds;
-        [window addSubview:self];
         
         self.shadowView = [[UIView alloc] init];
         self.shadowView.frame = self.bounds;
@@ -34,7 +39,6 @@ static CGFloat shapeWidth = 15.0f;
         [self addSubview:self.shadowView];
         
         self.bgView = [[UIView alloc] init];
-        self.bgView.backgroundColor = [UIColor whiteColor];
         [self.shadowView addSubview:self.bgView];
         
         UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapSelfHidden)];
@@ -50,6 +54,9 @@ static CGFloat shapeWidth = 15.0f;
         _topSpace = 5.0f;
         _titleColor = [UIColor whiteColor];
         _titleFont = [UIFont systemFontOfSize:14.0f];
+        
+        [window addSubview:self];
+        [window bringSubviewToFront:self];
     }
     return self;
 }
@@ -98,6 +105,9 @@ static CGFloat shapeWidth = 15.0f;
         {
             [optionView configTitle:titleArray[i] image:nil titleColor:_titleColor font:_titleFont];
         }
+        optionView.tag = i;
+        optionView.userInteractionEnabled = YES;
+        [optionView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapOptionView:)]];
         
         [self.bgView addSubview:optionView];
         
@@ -106,32 +116,36 @@ static CGFloat shapeWidth = 15.0f;
     }
     
 #pragma mark 这里是想根据实际图片和文字的最大高度，赋值Item高度，现在改为外面设置高度
-//    //赋值整体宽度
+    
+    
+    //赋值整体宽度
 //    CGFloat maxItemHeight = _topSpace * 2 + MAX(maxTitleHeight,maxImageHeight);
-//    NSInteger index = 0;
-//    for (UIView * vie in self.bgView.subviews)
-//    {
-//        if ([vie isKindOfClass:[HHZPopupOptionView class]])
-//        {
-//            index = ((HHZPopupOptionView *)vie).itemIndex;
-//            if (isImageExist)
-//            {
-//                vie.frame = CGRectMake(vie.x, index * maxItemHeight, _leftSpace + _rightSpace + _betweenSpace + maxTitleWidth + maxImageWidth, maxItemHeight);
-//            }
-//            else
-//            {
-//                vie.frame = CGRectMake(vie.x, index * maxItemHeight, _leftSpace + _rightSpace + maxTitleWidth, maxItemHeight);
-//            }
-//            
-//            if (bgViewWidth == 0.0) bgViewWidth = vie.width;
-//        }
-//    }
-//    
-//    //最后再根据文本和图片实际最大宽高值设置frame
-//    self.bgView.frame = CGRectMake(0, 0, bgViewWidth, maxItemHeight * titleArray.count);
+    //修改
+    CGFloat maxItemHeight = _itemHeight;
+    
+    NSInteger index = 0;
+    for (UIView * vie in self.bgView.subviews)
+    {
+        if ([vie isKindOfClass:[HHZPopupOptionView class]])
+        {
+            index = ((HHZPopupOptionView *)vie).itemIndex;
+            if (isImageExist)
+            {
+                vie.frame = CGRectMake(vie.x, index * maxItemHeight, _leftSpace + _rightSpace + _betweenSpace + maxTitleWidth + maxImageWidth, maxItemHeight);
+            }
+            else
+            {
+                vie.frame = CGRectMake(vie.x, index * maxItemHeight, _leftSpace + _rightSpace + maxTitleWidth, maxItemHeight);
+            }
+            
+            if (bgViewWidth == 0.0) bgViewWidth = vie.width;
+        }
+    }
+    
+    //最后再根据文本和图片实际最大宽高值设置frame
+    self.bgView.frame = CGRectMake(0, 0, bgViewWidth, maxItemHeight * titleArray.count);
     
     
-    self.bgView.frame = CGRectMake(0, 0, bgViewWidth, _itemHeight * titleArray.count);
     //添加三角形,如果是自动模式的话，需要特殊处理
     if (shapeLocation == HHZPopupOptionsViewTopShapeLocationAutomatic)
     {
@@ -172,6 +186,7 @@ static CGFloat shapeWidth = 15.0f;
         default:
             break;
     }
+    [self.topShape setNeedsDisplay];
 }
 
 -(void)handlePointAutomatic:(CGPoint)point
@@ -210,6 +225,15 @@ static CGFloat shapeWidth = 15.0f;
     [self.shadowView addSubview:self.topShape];
 }
 
+//点击OptionView事件
+-(void)tapOptionView:(UITapGestureRecognizer *)gesture
+{
+    if (_delegate && [_delegate respondsToSelector:@selector(dlTapOptionAtIndex:)])
+    {
+        [_delegate dlTapOptionAtIndex:[gesture view].tag];
+    }
+}
+
 -(HHZOptionsViewTopShape *)topShape
 {
     if (!_topShape)
@@ -246,8 +270,10 @@ static CGFloat shapeWidth = 15.0f;
 #pragma mark 事件触发
 -(void)tapSelfHidden
 {
-    [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
-    [self removeFromSuperview];
+    if (_delegate && [_delegate respondsToSelector:@selector(dlTapToHidden)])
+    {
+        [_delegate dlTapToHidden];
+    }
 }
 
 @end

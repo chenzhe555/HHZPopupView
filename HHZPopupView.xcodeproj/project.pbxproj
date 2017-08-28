@@ -16,6 +16,8 @@
 		6E5812441F2DC4B2002EA975 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E5812421F2DC4B2002EA975 /* Main.storyboard */; };
 		6E5812461F2DC4B2002EA975 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E5812451F2DC4B2002EA975 /* Assets.xcassets */; };
 		6E5812491F2DC4B2002EA975 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E5812471F2DC4B2002EA975 /* LaunchScreen.storyboard */; };
+		6EF72F7B1F53951900A41DC0 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EF72F791F53951900A41DC0 /* TestViewController.m */; };
+		6EF72F7C1F53951900A41DC0 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EF72F7A1F53951900A41DC0 /* TestViewController.xib */; };
 		E5D6A0EF9B2D25896240ACB7 /* libPods-HHZPopupView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22790B9F5CC65D890723BC1F /* libPods-HHZPopupView.a */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +40,9 @@
 		6E5812451F2DC4B2002EA975 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E5812481F2DC4B2002EA975 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E58124A1F2DC4B2002EA975 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6EF72F781F53951900A41DC0 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		6EF72F791F53951900A41DC0 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		6EF72F7A1F53951900A41DC0 /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		F3E47A39542AD7853ECDE454 /* Pods-HHZPopupView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHZPopupView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HHZPopupView/Pods-HHZPopupView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +105,9 @@
 				6E58123D1F2DC4B2002EA975 /* AppDelegate.m */,
 				6E58123F1F2DC4B2002EA975 /* ViewController.h */,
 				6E5812401F2DC4B2002EA975 /* ViewController.m */,
+				6EF72F781F53951900A41DC0 /* TestViewController.h */,
+				6EF72F791F53951900A41DC0 /* TestViewController.m */,
+				6EF72F7A1F53951900A41DC0 /* TestViewController.xib */,
 				6E5812421F2DC4B2002EA975 /* Main.storyboard */,
 				6E5812451F2DC4B2002EA975 /* Assets.xcassets */,
 				6E5812471F2DC4B2002EA975 /* LaunchScreen.storyboard */,
@@ -197,6 +205,7 @@
 			files = (
 				6E5812491F2DC4B2002EA975 /* LaunchScreen.storyboard in Resources */,
 				6E5812461F2DC4B2002EA975 /* Assets.xcassets in Resources */,
+				6EF72F7C1F53951900A41DC0 /* TestViewController.xib in Resources */,
 				6E5812441F2DC4B2002EA975 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,6 +270,7 @@
 			files = (
 				6E1B71451F514E0D0082DED1 /* HHZOptionsViewTopShape.m in Sources */,
 				6E1B71471F514E0D0082DED1 /* HHZPopupOptionView.m in Sources */,
+				6EF72F7B1F53951900A41DC0 /* TestViewController.m in Sources */,
 				6E5812411F2DC4B2002EA975 /* ViewController.m in Sources */,
 				6E58123E1F2DC4B2002EA975 /* AppDelegate.m in Sources */,
 				6E58123B1F2DC4B2002EA975 /* main.m in Sources */,
