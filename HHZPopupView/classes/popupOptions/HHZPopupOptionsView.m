@@ -115,15 +115,14 @@ static CGFloat shapeWidth = 15.0f;
         maxTitleHeight = MAX(maxTitleHeight, [optionView getOptionLabelHeight]);
     }
     
-#pragma mark 这里是想根据实际图片和文字的最大高度，赋值Item高度，现在改为外面设置高度
-    
-    
-    //赋值整体宽度
-//    CGFloat maxItemHeight = _topSpace * 2 + MAX(maxTitleHeight,maxImageHeight);
-    //修改
-    CGFloat maxItemHeight = _itemHeight;
+    //如果设置item高度和宽度，则根据外面的来
+    CGFloat maxItemHeight = 0;
+    if (_itemHeight > 0) maxItemHeight = _itemHeight;
+    else maxImageHeight = _topSpace * 2 + MAX(maxTitleHeight,maxImageHeight);
     
     NSInteger index = 0;
+    
+    CGFloat itemRealWidth = 0;
     for (UIView * vie in self.bgView.subviews)
     {
         if ([vie isKindOfClass:[HHZPopupOptionView class]])
@@ -131,11 +130,15 @@ static CGFloat shapeWidth = 15.0f;
             index = ((HHZPopupOptionView *)vie).itemIndex;
             if (isImageExist)
             {
-                vie.frame = CGRectMake(vie.x, index * maxItemHeight, _leftSpace + _rightSpace + _betweenSpace + maxTitleWidth + maxImageWidth, maxItemHeight);
+                if (self.itemWidth > 0) itemRealWidth = self.itemWidth;
+                else itemRealWidth = _leftSpace + _rightSpace + _betweenSpace + maxTitleWidth + maxImageWidth;
+                vie.frame = CGRectMake(vie.x, index * maxItemHeight, itemRealWidth, maxItemHeight);
             }
             else
             {
-                vie.frame = CGRectMake(vie.x, index * maxItemHeight, _leftSpace + _rightSpace + maxTitleWidth, maxItemHeight);
+                if (self.itemWidth > 0) itemRealWidth = self.itemWidth;
+                else itemRealWidth = _leftSpace + _rightSpace + maxTitleWidth;
+                vie.frame = CGRectMake(vie.x, index * maxItemHeight, itemRealWidth, maxItemHeight);
             }
             
             if (bgViewWidth == 0.0) bgViewWidth = vie.width;

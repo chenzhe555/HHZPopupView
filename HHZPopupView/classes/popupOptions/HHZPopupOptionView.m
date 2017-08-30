@@ -55,8 +55,12 @@
     [super setFrame:frame];
     if (frame.size.width > 0)
     {
-        self.imgView.frame = CGRectMake(self.imgView.x, (frame.size.height - self.imgView.height)/2, self.imgView.width, self.imgView.height);
-        self.titleLabel.frame = CGRectMake(self.titleLabel.x, (frame.size.height - self.titleLabel.height)/2, self.titleLabel.width, self.titleLabel.height);
+        CGFloat imgX = (frame.size.width - self.imgView.width - (self.imgView.width > 0 ? _betweenSpace : 0) - self.titleLabel.width)/2;
+        
+        self.imgView.frame = CGRectMake(imgX, (frame.size.height - self.imgView.height)/2, self.imgView.width, self.imgView.height);
+        
+        CGFloat labelX = self.imgView.width > 0 ? self.imgView.xPlusWidth + _betweenSpace : self.imgView.xPlusWidth;
+        self.titleLabel.frame = CGRectMake(labelX, (frame.size.height - self.titleLabel.height)/2, self.titleLabel.width, self.titleLabel.height);
         _bottomView.frame = CGRectMake(0, frame.size.height - 0.3, frame.size.width, 0.3);
     }
 }
@@ -96,14 +100,14 @@
     
     //计算文本的Frame
     self.titleLabel.text = title;
-    if (image)
-    {
-        self.titleLabel.frame = CGRectMake(_leftSpace + _maxImageWidth + _betweenSpace, (self.height - self.titleLabel.height)/2, self.titleLabel.width, self.titleLabel.height);
-    }
-    else
-    {
-        self.titleLabel.frame = CGRectMake(_leftSpace, (self.height - self.titleLabel.height)/2, self.titleLabel.width, self.titleLabel.height);
-    }
+//    if (image)
+//    {
+//        self.titleLabel.frame = CGRectMake(_leftSpace + _maxImageWidth + _betweenSpace, (self.height - self.titleLabel.height)/2, self.titleLabel.width, self.titleLabel.height);
+//    }
+//    else
+//    {
+//        self.titleLabel.frame = CGRectMake(_leftSpace, (self.height - self.titleLabel.height)/2, self.titleLabel.width, self.titleLabel.height);
+//    }
 }
 
 

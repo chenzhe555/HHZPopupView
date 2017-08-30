@@ -40,6 +40,7 @@
     self.popOptionsView = [[HHZPopupOptionsView alloc] init];
     _popOptionsView.delegate = self;
     _popOptionsView.itemHeight = 66.0f;
+    _popOptionsView.itemWidth = 220.0f;
     _popOptionsView.topShape.fillColor = RH_Common_Blue_Color;
     _popOptionsView.topShape.lineColor = RH_Common_Blue_Color;
     _popOptionsView.bgView.backgroundColor = RH_Common_Blue_Color;
