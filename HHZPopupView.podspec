@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "HHZPopupView"
-  s.version      = "0.0.1.5"
+  s.version      = "0.0.1.6"
   s.summary      = "HHZPopupView"
 
   # This description is used to generate tags and improve search results.
@@ -95,6 +95,10 @@ Pod::Spec.new do |s|
   s.subspec 'HHZPopupView' do |one|
       one.subspec 'popupOptions' do |three|
         three.source_files = 'HHZPopupView/classes/popupOptions/*.{h,m}'
+      end
+
+      one.subspec 'dropdownmenu' do |three|
+        three.source_files = 'HHZPopupView/classes/dropdownmenu/*.{h,m}'
       end
   end
 
