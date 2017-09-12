@@ -75,6 +75,7 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.backgroundColor = [UIColor clearColor];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     UIWindow * window = [HHZKitTool getMainWindow];
     self.tableView.frame = CGRectMake(_orginPoint.x, _orginPoint.y + self.bounds.size.height, self.bounds.size.width, window.bounds.size.height - _orginPoint.y - self.bounds.size.height);
@@ -86,19 +87,42 @@
 -(void)dlTapItemAtIndex:(NSInteger)index
 {
     _currentIndex = index;
-    [self addTableViewOnWindow];
     HHZDropDownMenuItem * item = [self viewWithTag:(666 + index)];
-    if (item == _currentItem)
+    if (item.isShowMore)
     {
-        _currentItem.isSelected = !_currentItem.isSelected;
-        if (!_currentItem.isSelected) self.tableView.hidden = YES;
+        [self addTableViewOnWindow];
+        if (item == _currentItem)
+        {
+            _currentItem.isSelected = !_currentItem.isSelected;
+            if (!_currentItem.isSelected) self.tableView.hidden = YES;
+        }
+        else
+        {
+            _currentItem.isSelected = NO;
+            item.isSelected = YES;
+            _currentItem = item;
+        }
     }
     else
     {
-        _currentItem.isSelected = NO;
-        item.isSelected = YES;
-        _currentItem = item;
+        self.tableView.hidden = YES;
+        if (item == _currentItem)
+        {
+            _currentItem.isSelected = !_currentItem.isSelected;
+        }
+        else
+        {
+            _currentItem.isSelected = NO;
+            item.isSelected = YES;
+            _currentItem = item;
+        }
+        if (_delegate && [_delegate respondsToSelector:@selector(dlTapTopMenuItemAtIndex:isSelected:)])
+        {
+            [_delegate dlTapTopMenuItemAtIndex:index isSelected:_currentItem.isSelected];
+        }
     }
+    
+    
 }
 
 -(void)addTableViewOnWindow

@@ -12,6 +12,8 @@
 		6E1B71451F514E0D0082DED1 /* HHZOptionsViewTopShape.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1B71401F514E0D0082DED1 /* HHZOptionsViewTopShape.m */; };
 		6E1B71461F514E0D0082DED1 /* HHZPopupOptionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1B71421F514E0D0082DED1 /* HHZPopupOptionsView.m */; };
 		6E1B71471F514E0D0082DED1 /* HHZPopupOptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1B71441F514E0D0082DED1 /* HHZPopupOptionView.m */; };
+		6E2B4F6E1F68A43A002E229C /* HHZDropDownMenuNormalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2B4F6C1F68A43A002E229C /* HHZDropDownMenuNormalCell.m */; };
+		6E2B4F6F1F68A43A002E229C /* HHZDropDownMenuNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E2B4F6D1F68A43A002E229C /* HHZDropDownMenuNormalCell.xib */; };
 		6E58123B1F2DC4B2002EA975 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E58123A1F2DC4B2002EA975 /* main.m */; };
 		6E58123E1F2DC4B2002EA975 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E58123D1F2DC4B2002EA975 /* AppDelegate.m */; };
 		6E5812411F2DC4B2002EA975 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5812401F2DC4B2002EA975 /* ViewController.m */; };
@@ -36,6 +38,9 @@
 		6E1B71421F514E0D0082DED1 /* HHZPopupOptionsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHZPopupOptionsView.m; sourceTree = "<group>"; };
 		6E1B71431F514E0D0082DED1 /* HHZPopupOptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHZPopupOptionView.h; sourceTree = "<group>"; };
 		6E1B71441F514E0D0082DED1 /* HHZPopupOptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHZPopupOptionView.m; sourceTree = "<group>"; };
+		6E2B4F6B1F68A43A002E229C /* HHZDropDownMenuNormalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHZDropDownMenuNormalCell.h; sourceTree = "<group>"; };
+		6E2B4F6C1F68A43A002E229C /* HHZDropDownMenuNormalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHZDropDownMenuNormalCell.m; sourceTree = "<group>"; };
+		6E2B4F6D1F68A43A002E229C /* HHZDropDownMenuNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HHZDropDownMenuNormalCell.xib; sourceTree = "<group>"; };
 		6E5812361F2DC4B2002EA975 /* HHZPopupView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HHZPopupView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E58123A1F2DC4B2002EA975 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6E58123C1F2DC4B2002EA975 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -71,6 +76,9 @@
 				6E0DD3111F666F7600F332A4 /* HHZDropDownMenu.m */,
 				6E0DD3131F666FB600F332A4 /* HHZDropDownMenuItem.h */,
 				6E0DD3141F666FB600F332A4 /* HHZDropDownMenuItem.m */,
+				6E2B4F6B1F68A43A002E229C /* HHZDropDownMenuNormalCell.h */,
+				6E2B4F6C1F68A43A002E229C /* HHZDropDownMenuNormalCell.m */,
+				6E2B4F6D1F68A43A002E229C /* HHZDropDownMenuNormalCell.xib */,
 			);
 			path = dropdownmenu;
 			sourceTree = "<group>";
@@ -224,6 +232,7 @@
 				6E5812491F2DC4B2002EA975 /* LaunchScreen.storyboard in Resources */,
 				6E5812461F2DC4B2002EA975 /* Assets.xcassets in Resources */,
 				6EF72F7C1F53951900A41DC0 /* TestViewController.xib in Resources */,
+				6E2B4F6F1F68A43A002E229C /* HHZDropDownMenuNormalCell.xib in Resources */,
 				6E5812441F2DC4B2002EA975 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E0DD3121F666F7600F332A4 /* HHZDropDownMenu.m in Sources */,
+				6E2B4F6E1F68A43A002E229C /* HHZDropDownMenuNormalCell.m in Sources */,
 				6E1B71451F514E0D0082DED1 /* HHZOptionsViewTopShape.m in Sources */,
 				6E1B71471F514E0D0082DED1 /* HHZPopupOptionView.m in Sources */,
 				6EF72F7B1F53951900A41DC0 /* TestViewController.m in Sources */,

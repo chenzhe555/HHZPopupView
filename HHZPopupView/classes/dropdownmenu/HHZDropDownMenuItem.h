@@ -33,6 +33,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL isSelected;
 //当前Item索引值
 @property (nonatomic, assign) NSInteger index;
+//点击后是否展示更多数据,默认是YES
+@property (nonatomic, assign) BOOL isShowMore;
 
 -(void)configItemModel:(HHZDropDownMenuItemModel *)model index:(NSInteger)index delegate:(id<HHZDropDownMenuItemDelegate>)delegate;
 @end

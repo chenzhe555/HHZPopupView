@@ -20,6 +20,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void)menu:(HHZDropDownMenu *)menu didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 
+#pragma mark 点击Menu事件
+-(void)dlTapTopMenuItemAtIndex:(NSInteger)index isSelected:(BOOL)isSelected;
+
 @end
 
 @protocol HHZDropDownMenuDataSource <NSObject>

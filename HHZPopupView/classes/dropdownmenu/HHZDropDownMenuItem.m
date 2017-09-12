@@ -26,6 +26,7 @@
 {
     _delegate = delegate;
     _index = index;
+    _isShowMore = model.isShowMore;
     
     self.titleLabel.text = model.title;
     self.titleLabel.frame = CGRectMake((self.frame.size.width - self.titleLabel.bounds.size.width - kHHZDropDownMenuItemSpace - self.shapeView.bounds.size.width)/2, (self.bounds.size.height - self.titleLabel.bounds.size.height)/2, self.titleLabel.bounds.size.width, self.titleLabel.bounds.size.height);
@@ -92,6 +93,7 @@
 +(instancetype)generateWithTitle:(NSString *)title isShowMore:(BOOL)isShowMore
 {
     HHZDropDownMenuItemModel * model = [[HHZDropDownMenuItemModel alloc] init];
+    model.title = title;
     model.isShowMore = isShowMore;
     return model;
 }

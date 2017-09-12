@@ -9,6 +9,7 @@
 #import "TestViewController.h"
 #import "HHZPopupOptionsView.h"
 #import "HHZDropDownMenu.h"
+#import "HHZDropDownMenuNormalCell.h"
 
 #define RH_Common_Blue_Color  [UIColor colorWithRed:0/255.0 green:166/255.0 blue:228/255.0 alpha:1]
 @interface TestViewController ()<HHZPopupOptionViewsDelegate,HHZDropDownMenuDelegate,HHZDropDownMenuDataSource>
@@ -133,6 +134,27 @@
     }
 }
 
+-(UITableViewCell *)menu:(HHZDropDownMenu *)menu cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSArray * arr;
+    if (menu.currentIndex == 0)
+    {
+        arr = self.arr1;
+    }
+    else if (menu.currentIndex == 1)
+    {
+        arr = self.arr2;
+    }
+    else if (menu.currentIndex == 2)
+    {
+        arr = self.arr3;
+    }
+    return [HHZDropDownMenuNormalCell configCellWithTableView:menu.tableView indexPath:indexPath dataArray:arr];
+}
 
+-(void)dlTapTopMenuItemAtIndex:(NSInteger)index isSelected:(BOOL)isSelected
+{
+    NSLog(@"index:%ld\nselected:%d",(long)index,isSelected);
+}
 
 @end
