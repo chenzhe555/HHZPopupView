@@ -10,10 +10,9 @@
 #import <HHZUtils/HHZKitTool.h>
 
 @interface HHZDropDownMenu ()<HHZDropDownMenuItemDelegate,UITableViewDelegate,UITableViewDataSource>
-@property (nonatomic, strong) NSArray * menusArray;
+@property (nonatomic, strong) NSArray<HHZDropDownMenuItemModel *> * menusArray;
 @property (nonatomic, strong) HHZDropDownMenuItem * currentItem;
 
-@property (nonatomic, strong) UITableView * tableView;
 @property (nonatomic, strong) NSArray * dataArray;
 
 @property (nonatomic, assign) CGPoint orginPoint;
@@ -29,6 +28,7 @@
         self.backgroundColor = [UIColor whiteColor];
         _currentIndex = 0;
         _orginPoint = point;
+        _isChangeTopItemTitle = NO;
     }
     return self;
 }
@@ -58,7 +58,7 @@
     {
         HHZDropDownMenuItem * item = [[HHZDropDownMenuItem alloc] init];
         item.frame = CGRectMake(i*itemWidth, 0, itemWidth, self.bounds.size.height);
-        [item configItemTitle:self.menusArray[i] index:i delegate:self];
+        [item configItemModel:self.menusArray[i] index:i delegate:self];
         item.tag = 666 + i;
         [self addSubview:item];
     }
@@ -129,22 +129,25 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [_dataSource menu:self cellForRowAtIndexPath:indexPath];
+    if (_dataSource && [_dataSource respondsToSelector:@selector(menu:cellForRowAtIndexPath:)]) return [_dataSource menu:self cellForRowAtIndexPath:indexPath];
+    else return [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"xxx"];
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
-    return [_delegate menu:self heightForFooterInSection:section];
+    if (_delegate && [_delegate respondsToSelector:@selector(menu:heightForFooterInSection:)]) return [_delegate menu:self heightForFooterInSection:section];
+    return 0.01f;
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
-    return [_delegate menu:self viewForFooterInSection:section];
+    if (_delegate && [_delegate respondsToSelector:@selector(menu:viewForFooterInSection:)]) return [_delegate menu:self viewForFooterInSection:section];
+    else return nil;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    if (_delegate && [_delegate respondsToSelector:@selector(menu:didSelectRowAtIndexPath:)]) [_delegate menu:self didSelectRowAtIndexPath:indexPath];
 }
 
 

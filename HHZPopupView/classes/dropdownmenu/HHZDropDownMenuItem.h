@@ -10,6 +10,18 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@interface HHZDropDownMenuItemModel : NSObject
+//显示的标题
+@property (nonatomic, copy) NSString * title;
+//点击后是否展示更多数据,默认是YES
+@property (nonatomic, assign) BOOL isShowMore;
+
+//便利式函数
++(instancetype)generateWithTitle:(NSString *)title;
+
++(instancetype)generateWithTitle:(NSString *)title isShowMore:(BOOL)isShowMore;
+@end
+
 @protocol HHZDropDownMenuItemDelegate <NSObject>
 @optional
 -(void)dlTapItemAtIndex:(NSInteger)index;
@@ -22,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
 //当前Item索引值
 @property (nonatomic, assign) NSInteger index;
 
--(void)configItemTitle:(NSString *)title index:(NSInteger)index delegate:(id<HHZDropDownMenuItemDelegate>)delegate;
+-(void)configItemModel:(HHZDropDownMenuItemModel *)model index:(NSInteger)index delegate:(id<HHZDropDownMenuItemDelegate>)delegate;
 @end
 
 NS_ASSUME_NONNULL_END

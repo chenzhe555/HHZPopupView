@@ -68,9 +68,9 @@
     
 }
 
--(NSArray *)dlTopMenus
+-(NSArray<HHZDropDownMenuItemModel *> *)dlTopMenus
 {
-    return @[@"创建时间",@"审批状态",@"加一个"];
+    return @[[HHZDropDownMenuItemModel generateWithTitle:@"创建时间" isShowMore:NO],[HHZDropDownMenuItemModel generateWithTitle:@"审批状态" isShowMore:YES]];
 }
 
 -(NSInteger)numberOfSectionsInMenu:(HHZDropDownMenu *)menu

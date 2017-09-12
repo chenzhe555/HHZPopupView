@@ -22,12 +22,12 @@
 
 @implementation HHZDropDownMenuItem
 
--(void)configItemTitle:(NSString *)title index:(NSInteger)index delegate:(nonnull id<HHZDropDownMenuItemDelegate>)delegate
+-(void)configItemModel:(HHZDropDownMenuItemModel *)model index:(NSInteger)index delegate:(id<HHZDropDownMenuItemDelegate>)delegate
 {
     _delegate = delegate;
     _index = index;
     
-    self.titleLabel.text = title;
+    self.titleLabel.text = model.title;
     self.titleLabel.frame = CGRectMake((self.frame.size.width - self.titleLabel.bounds.size.width - kHHZDropDownMenuItemSpace - self.shapeView.bounds.size.width)/2, (self.bounds.size.height - self.titleLabel.bounds.size.height)/2, self.titleLabel.bounds.size.width, self.titleLabel.bounds.size.height);
     self.shapeView.frame = CGRectMake(self.titleLabel.frame.origin.x + self.titleLabel.bounds.size.width + kHHZDropDownMenuItemSpace, (self.bounds.size.height - self.shapeView.bounds.size.height)/2, self.shapeView.bounds.size.width, self.shapeView.bounds.size.height);
     [self addTapGesture];
@@ -79,4 +79,20 @@
     return _shapeView;
 }
 
+@end
+
+
+@implementation HHZDropDownMenuItemModel
+
++(instancetype)generateWithTitle:(NSString *)title
+{
+    return [self generateWithTitle:title isShowMore:YES];
+}
+
++(instancetype)generateWithTitle:(NSString *)title isShowMore:(BOOL)isShowMore
+{
+    HHZDropDownMenuItemModel * model = [[HHZDropDownMenuItemModel alloc] init];
+    model.isShowMore = isShowMore;
+    return model;
+}
 @end
