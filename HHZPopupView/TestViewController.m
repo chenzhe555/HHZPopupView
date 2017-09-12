@@ -59,7 +59,7 @@
     self.arr2 = @[@[@"21",@"22"],@[@"23",@"22",@"23"]];
     self.arr3 = @[@[@"31",@"323",@"33",@"32",@"33",@"31",@"32"]];
     
-    self.dropDownMenu = [[HHZDropDownMenu alloc] init];
+    self.dropDownMenu = [[HHZDropDownMenu alloc] initWithPoint:CGPointMake(0, 64)];
     self.dropDownMenu.frame = CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, 44);
     self.dropDownMenu.delegate = self;
     self.dropDownMenu.dataSource = self;

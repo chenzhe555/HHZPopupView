@@ -12,11 +12,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef NS_ENUM(NSInteger,HHZDropDownMenuType) {
-    HHZDropDownMenuTypeNormal = 300
-};
-
 @protocol HHZDropDownMenuDelegate <NSObject>
+
+-(CGFloat)menu:(HHZDropDownMenu *)menu heightForFooterInSection:(NSInteger)section;
+
+-(UIView *)menu:(HHZDropDownMenu *)menu viewForFooterInSection:(NSInteger)section;
+
+-(void)menu:(HHZDropDownMenu *)menu didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
 
@@ -33,15 +35,18 @@ typedef NS_ENUM(NSInteger,HHZDropDownMenuType) {
 
 -(NSString *)menu:(HHZDropDownMenu *)menu titleForRowAtIndexPath:(NSIndexPath *)indexPath;
 
+-(UITableViewCell *)menu:(HHZDropDownMenu *)menu cellForRowAtIndexPath:(NSIndexPath *)indexPath;
+
 @end
 
 @interface HHZDropDownMenu : UIView
 @property (nonatomic, assign) id<HHZDropDownMenuDelegate> delegate;
 @property (nonatomic, assign) id<HHZDropDownMenuDataSource> dataSource;
-@property (nonatomic, assign) HHZDropDownMenuType type;
 
 //当前选中的Index
 @property (nonatomic, assign) NSInteger currentIndex;
+
+-(instancetype)initWithPoint:(CGPoint)point;
 @end
 
 NS_ASSUME_NONNULL_END

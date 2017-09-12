@@ -7,7 +7,6 @@
 //
 
 #import "HHZDropDownMenu.h"
-#import "HHZDropDownMenuCell.h"
 #import <HHZUtils/HHZKitTool.h>
 
 @interface HHZDropDownMenu ()<HHZDropDownMenuItemDelegate,UITableViewDelegate,UITableViewDataSource>
@@ -16,17 +15,20 @@
 
 @property (nonatomic, strong) UITableView * tableView;
 @property (nonatomic, strong) NSArray * dataArray;
+
+@property (nonatomic, assign) CGPoint orginPoint;
 @end
 
 @implementation HHZDropDownMenu
 
-- (instancetype)init
+-(instancetype)initWithPoint:(CGPoint)point
 {
     self = [super init];
-    if (self) {
+    if (self)
+    {
         self.backgroundColor = [UIColor whiteColor];
-        _type = HHZDropDownMenuTypeNormal;
         _currentIndex = 0;
+        _orginPoint = point;
     }
     return self;
 }
@@ -60,6 +62,11 @@
         item.tag = 666 + i;
         [self addSubview:item];
     }
+    
+    UIView * vie = [[UIView alloc] init];
+    vie.backgroundColor = [UIColor lightGrayColor];
+    vie.frame = CGRectMake(0, self.bounds.size.height - 0.5f, self.bounds.size.width, 0.5f);
+    [self addSubview:vie];
 }
 
 -(void)createTableView
@@ -70,7 +77,7 @@
     self.tableView.backgroundColor = [UIColor clearColor];
     
     UIWindow * window = [HHZKitTool getMainWindow];
-    self.tableView.frame = CGRectMake(0, 64 + 44, window.bounds.size.width, window.bounds.size.height - 64 - 44);
+    self.tableView.frame = CGRectMake(_orginPoint.x, _orginPoint.y + self.bounds.size.height, self.bounds.size.width, window.bounds.size.height - _orginPoint.y - self.bounds.size.height);
     
     self.tableView.hidden = YES;
 }
@@ -122,12 +129,23 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString * str = [_dataSource menu:self titleForRowAtIndexPath:indexPath];
-    return [HHZDropDownMenuCell configCellWithTableView:tableView title:(str.length > 0 ? str : @"")];
+    return [_dataSource menu:self cellForRowAtIndexPath:indexPath];
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
-    return 0.01f;
+    return [_delegate menu:self heightForFooterInSection:section];
 }
+
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    return [_delegate menu:self viewForFooterInSection:section];
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
+
+
 @end

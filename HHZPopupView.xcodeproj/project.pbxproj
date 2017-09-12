@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		6E0DD3121F666F7600F332A4 /* HHZDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0DD3111F666F7600F332A4 /* HHZDropDownMenu.m */; };
 		6E0DD3151F666FB600F332A4 /* HHZDropDownMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0DD3141F666FB600F332A4 /* HHZDropDownMenuItem.m */; };
-		6E0DD3191F667BF400F332A4 /* HHZDropDownMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0DD3171F667BF400F332A4 /* HHZDropDownMenuCell.m */; };
 		6E1B71451F514E0D0082DED1 /* HHZOptionsViewTopShape.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1B71401F514E0D0082DED1 /* HHZOptionsViewTopShape.m */; };
 		6E1B71461F514E0D0082DED1 /* HHZPopupOptionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1B71421F514E0D0082DED1 /* HHZPopupOptionsView.m */; };
 		6E1B71471F514E0D0082DED1 /* HHZPopupOptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1B71441F514E0D0082DED1 /* HHZPopupOptionView.m */; };
@@ -31,8 +30,6 @@
 		6E0DD3111F666F7600F332A4 /* HHZDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHZDropDownMenu.m; sourceTree = "<group>"; };
 		6E0DD3131F666FB600F332A4 /* HHZDropDownMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHZDropDownMenuItem.h; sourceTree = "<group>"; };
 		6E0DD3141F666FB600F332A4 /* HHZDropDownMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHZDropDownMenuItem.m; sourceTree = "<group>"; };
-		6E0DD3161F667BF400F332A4 /* HHZDropDownMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHZDropDownMenuCell.h; sourceTree = "<group>"; };
-		6E0DD3171F667BF400F332A4 /* HHZDropDownMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHZDropDownMenuCell.m; sourceTree = "<group>"; };
 		6E1B713F1F514E0D0082DED1 /* HHZOptionsViewTopShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHZOptionsViewTopShape.h; sourceTree = "<group>"; };
 		6E1B71401F514E0D0082DED1 /* HHZOptionsViewTopShape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHZOptionsViewTopShape.m; sourceTree = "<group>"; };
 		6E1B71411F514E0D0082DED1 /* HHZPopupOptionsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHZPopupOptionsView.h; sourceTree = "<group>"; };
@@ -74,8 +71,6 @@
 				6E0DD3111F666F7600F332A4 /* HHZDropDownMenu.m */,
 				6E0DD3131F666FB600F332A4 /* HHZDropDownMenuItem.h */,
 				6E0DD3141F666FB600F332A4 /* HHZDropDownMenuItem.m */,
-				6E0DD3161F667BF400F332A4 /* HHZDropDownMenuCell.h */,
-				6E0DD3171F667BF400F332A4 /* HHZDropDownMenuCell.m */,
 			);
 			path = dropdownmenu;
 			sourceTree = "<group>";
@@ -291,7 +286,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E0DD3191F667BF400F332A4 /* HHZDropDownMenuCell.m in Sources */,
 				6E0DD3121F666F7600F332A4 /* HHZDropDownMenu.m in Sources */,
 				6E1B71451F514E0D0082DED1 /* HHZOptionsViewTopShape.m in Sources */,
 				6E1B71471F514E0D0082DED1 /* HHZPopupOptionView.m in Sources */,
