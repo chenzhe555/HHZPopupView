@@ -9,6 +9,8 @@
 #import "HHZDropDownMenu.h"
 #import <HHZUtils/HHZKitTool.h>
 
+#define kHHZDropDownMenuSingleTag 98765
+
 @interface HHZDropDownMenu ()<HHZDropDownMenuItemDelegate,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) NSArray<HHZDropDownMenuItemModel *> * menusArray;
 @property (nonatomic, strong) HHZDropDownMenuItem * currentItem;
@@ -19,6 +21,14 @@
 @end
 
 @implementation HHZDropDownMenu
+
+-(void)dealloc
+{
+    UIWindow * window = [HHZKitTool getMainWindow];
+    UIView * vie = [window viewWithTag:kHHZDropDownMenuSingleTag];
+    [vie removeFromSuperview];
+    vie = nil;
+}
 
 -(instancetype)initWithPoint:(CGPoint)point
 {
@@ -31,6 +41,11 @@
         _isChangeTopItemTitle = NO;
     }
     return self;
+}
+
+-(void)hiddenAllViews
+{
+    self.tableView.hidden = YES;
 }
 
 -(void)setDataSource:(id<HHZDropDownMenuDataSource>)dataSource
@@ -131,6 +146,7 @@
     {
         UIWindow * window = [HHZKitTool getMainWindow];
         [window addSubview:self.tableView];
+        self.tableView.tag = kHHZDropDownMenuSingleTag;
         [window bringSubviewToFront:self.tableView];
     }
     [self.tableView reloadData];

@@ -53,6 +53,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) NSInteger currentIndex;
 
 -(instancetype)initWithPoint:(CGPoint)point;
+
+//主动隐藏所有视图
+-(void)hiddenAllViews;
 @end
 
 NS_ASSUME_NONNULL_END
