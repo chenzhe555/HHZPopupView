@@ -89,13 +89,33 @@
     self.tableView = [[UITableView alloc] init];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.tableView.backgroundColor = [UIColor clearColor];
+    self.tableView.backgroundColor = [[UIColor colorWithRed:242/255.0 green:242/255.0 blue:242/255.0 alpha:1] colorWithAlphaComponent:0.5];
+    self.tableView.bounces = NO;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     UIWindow * window = [HHZKitTool getMainWindow];
     self.tableView.frame = CGRectMake(_orginPoint.x, _orginPoint.y + self.bounds.size.height, self.bounds.size.width, window.bounds.size.height - _orginPoint.y - self.bounds.size.height);
     
     self.tableView.hidden = YES;
+    
+    UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapTableViewShowOrHidden)];
+    tap.delegate = self;
+    [self.tableView addGestureRecognizer:tap];
+}
+
+-(void)tapTableViewShowOrHidden
+{
+    [self dlTapItemAtIndex:_currentIndex];
+}
+
+#pragma mark UIGestureRecognizerDelegate
+-(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
+{
+    if ([NSStringFromClass([touch.view class]) isEqualToString:@"UITableViewCellContentView"])
+    {
+        return NO;
+    }
+    return YES;
 }
 
 #pragma mark HHZDropDownMenuItemDelegate
@@ -187,6 +207,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [self dlTapItemAtIndex:_currentIndex];
     if (_delegate && [_delegate respondsToSelector:@selector(menu:didSelectRowAtIndexPath:)]) [_delegate menu:self didSelectRowAtIndexPath:indexPath];
 }
 
