@@ -279,5 +279,12 @@ static CGFloat shapeWidth = 15.0f;
     }
 }
 
+-(void)removePopupOptionView
+{
+    [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    [self removeFromSuperview];
+}
+
+
 @end
 

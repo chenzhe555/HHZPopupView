@@ -75,6 +75,9 @@ NS_ASSUME_NONNULL_BEGIN
     rect 显示位置
  */
 -(void)showPopupOptionsViewTitle:(NSArray *)titleArray imageArray:(NSArray * _Nullable)imageArray shapeLocation:(HHZPopupOptionsViewTopShapeLocation)shapeLocation point:(CGPoint)point;
+
+//！！！！调用移除方法，不然会导致内存泄漏
+-(void)removePopupOptionView;
 @end
 
 
