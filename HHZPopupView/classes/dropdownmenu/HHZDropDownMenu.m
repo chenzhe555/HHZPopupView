@@ -43,9 +43,17 @@
     return self;
 }
 
--(void)hiddenAllViews
+-(void)hiddenTableView
 {
     self.tableView.hidden = YES;
+    self.currentItem.isSelected = NO;
+}
+
+-(void)removeAllViews
+{
+    [self hiddenTableView];
+    [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    [self removeFromSuperview];
 }
 
 -(void)setDataSource:(id<HHZDropDownMenuDataSource>)dataSource

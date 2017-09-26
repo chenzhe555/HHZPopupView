@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "HHZPopupView"
-  s.version      = "0.0.1.9"
+  s.version      = "0.0.1.10"
   s.summary      = "HHZPopupView"
 
   # This description is used to generate tags and improve search results.

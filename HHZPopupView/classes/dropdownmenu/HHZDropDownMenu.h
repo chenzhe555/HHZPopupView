@@ -54,8 +54,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(instancetype)initWithPoint:(CGPoint)point;
 
+-(void)hiddenTableView;
+
 //主动隐藏所有视图
--(void)hiddenAllViews;
+-(void)removeAllViews;
 @end
 
 NS_ASSUME_NONNULL_END
