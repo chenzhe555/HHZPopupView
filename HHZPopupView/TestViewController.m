@@ -28,9 +28,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.view.backgroundColor = [UIColor lightGrayColor];
-    
+    [self createPopUpView];
 
-    [self createDropDownMenu];
+//    [self createDropDownMenu];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,13 +44,17 @@
     _popOptionsView.delegate = self;
     _popOptionsView.itemHeight = 66.0f;
     _popOptionsView.itemWidth = 220.0f;
-    _popOptionsView.topShape.fillColor = RH_Common_Blue_Color;
-    _popOptionsView.topShape.lineColor = RH_Common_Blue_Color;
-    _popOptionsView.bgView.backgroundColor = RH_Common_Blue_Color;
+    _popOptionsView.topShape.fillColor = [UIColor whiteColor];
+    _popOptionsView.topShape.lineColor = [UIColor whiteColor];
+    _popOptionsView.bgView.backgroundColor = [UIColor whiteColor];
     _popOptionsView.bgSelectedColor = [UIColor lightGrayColor];
+    _popOptionsView.bottomLineColor = [UIColor redColor];
+    _popOptionsView.isShowShape = NO;
     
     self.view.backgroundColor = [UIColor redColor];
     [self.popOptionsView showPopupOptionsViewTitle:@[@"发起聊天",@"发起群聊"] imageArray:nil point:CGPointMake([UIScreen mainScreen].bounds.size.width - 26, 60)];
+    self.popOptionsView.hidden = NO;
+    [self.view addSubview:self.popOptionsView];
 }
 
 #pragma mark HHZDropDownMenu

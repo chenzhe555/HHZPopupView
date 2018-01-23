@@ -29,8 +29,6 @@
 @property (nonatomic, strong) UIColor * normalTitleColor;
 //选中的文字颜色
 @property (nonatomic, strong) UIColor * selectedTitleColor;
-//底部横线
-@property (nonatomic, strong) UIView * bottomView;
 //是否被按下，按下后有颜色变化效果
 @property (nonatomic, assign) BOOL isSelected;
 @end
@@ -41,10 +39,6 @@
 {
     self = [super init];
     if (self) {
-        _bottomView = [[UIView alloc] init];
-        _bottomView.backgroundColor = [UIColor lightGrayColor];
-        [self addSubview:_bottomView];
-        
         _isSelected = NO;
     }
     return self;
@@ -61,7 +55,6 @@
         
         CGFloat labelX = self.imgView.width > 0 ? self.imgView.xPlusWidth + _betweenSpace : self.imgView.xPlusWidth;
         self.titleLabel.frame = CGRectMake(labelX, (frame.size.height - self.titleLabel.height)/2, self.titleLabel.width, self.titleLabel.height);
-        _bottomView.frame = CGRectMake(0, frame.size.height - 0.3, frame.size.width, 0.3);
     }
 }
 

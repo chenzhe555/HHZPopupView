@@ -54,9 +54,11 @@ static CGFloat shapeWidth = 15.0f;
         _topSpace = 5.0f;
         _titleColor = [UIColor whiteColor];
         _titleFont = [UIFont systemFontOfSize:14.0f];
+        _isShowShape = YES;
         
         [window addSubview:self];
         [window bringSubviewToFront:self];
+        
     }
     return self;
 }
@@ -94,6 +96,7 @@ static CGFloat shapeWidth = 15.0f;
     {
         HHZPopupOptionView * optionView = [[HHZPopupOptionView alloc] init];
         optionView.itemIndex = i;
+        optionView.tag = i;
         optionView.frame = CGRectMake(0, i * _itemHeight, 0, _itemHeight);
         [optionView configBGNormalColor:self.bgView.backgroundColor selectedColor:_bgSelectedColor];
         [optionView configLeftSpace:_leftSpace rightSpace:_rightSpace betweenSpace:_betweenSpace maxImageWidth:maxImageWidth];
@@ -108,6 +111,14 @@ static CGFloat shapeWidth = 15.0f;
         optionView.tag = i;
         optionView.userInteractionEnabled = YES;
         [optionView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapOptionView:)]];
+        
+        if (i != titleArray.count - 1)
+        {
+            UIView * vie = [[UIView alloc] initWithFrame:CGRectMake(0, optionView.height - 0.5, optionView.width, 0.5)];
+            if (self.bottomLineColor != nil) vie.backgroundColor = self.bottomLineColor;
+            else vie.backgroundColor = [UIColor whiteColor];
+            [optionView addSubview:vie];
+        }
         
         [self.bgView addSubview:optionView];
         
@@ -142,12 +153,19 @@ static CGFloat shapeWidth = 15.0f;
             }
             
             if (bgViewWidth == 0.0) bgViewWidth = vie.width;
+            
+            if (index != titleArray.count - 1)
+            {
+                UIView * view1 = [[UIView alloc] initWithFrame:CGRectMake(0, vie.height - 0.5, bgViewWidth, 0.5)];
+                if (self.bottomLineColor != nil) view1.backgroundColor = self.bottomLineColor;
+                else view1.backgroundColor = [UIColor whiteColor];
+                [vie addSubview:view1];
+            }
         }
     }
     
     //最后再根据文本和图片实际最大宽高值设置frame
     self.bgView.frame = CGRectMake(0, 0, bgViewWidth, maxItemHeight * titleArray.count);
-    
     
     //添加三角形,如果是自动模式的话，需要特殊处理
     if (shapeLocation == HHZPopupOptionsViewTopShapeLocationAutomatic)
@@ -158,6 +176,9 @@ static CGFloat shapeWidth = 15.0f;
     {
         [self addShape:shapeLocation point:point];
     }
+    
+    if (!self.isShowShape) self.topShape.hidden = YES;
+
     
     self.bgView.layer.cornerRadius = 5.0f;
     self.bgView.layer.masksToBounds = YES;

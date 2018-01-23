@@ -36,6 +36,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIView * bgView;
 //顶部形状
 @property (nonatomic, strong) HHZOptionsViewTopShape * topShape;
+//是否显示顶部形状
+@property (nonatomic, assign) BOOL isShowShape;
 //显示的动画时间
 @property (nonatomic, assign) CGFloat appearDur;
 //消失的动画时间
@@ -58,6 +60,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIFont * titleFont;
 //Item选中颜色
 @property (nonatomic, strong) UIColor * bgSelectedColor;
+//底部线颜色
+@property (nonatomic, strong) UIColor * bottomLineColor;
 
 #pragma mark Required
 /**
