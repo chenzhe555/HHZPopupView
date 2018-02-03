@@ -184,6 +184,12 @@ static CGFloat shapeWidth = 15.0f;
     self.bgView.layer.masksToBounds = YES;
 }
 
+-(void)setHidden:(BOOL)hidden
+{
+    [super setHidden:hidden];
+    if (!self.isShowShape) self.topShape.hidden = YES;
+}
+
 -(void)addShape:(HHZPopupOptionsViewTopShapeLocation)shapeLocation point:(CGPoint)point
 {
     //shapeWidth 和 图形到bgVie左右间隙一样
